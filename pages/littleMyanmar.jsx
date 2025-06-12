@@ -36,27 +36,27 @@ const property = () => {
           There are also pages about of the restaurant and reviews from famous food review websites.
           </p>
           <a
-            href='https://www.littlemyanmar.nyc/'
+            href='https://littlemyanamar.com/'
             target='_blank'
             rel='noreferrer'
           >
             <button className='px-8 py-2 mt-4'>Demo</button>
           </a>
         </div>
-        <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4'>
+        <div className='col-span-4 py-4 shadow-xl md:col-span-1 shadow-gray-400 rounded-xl'>
           <div className='p-2'>
-            <p className='text-center font-bold pb-2'>Technologies</p>
+            <p className='pb-2 font-bold text-center'>Technologies</p>
             <div className='grid grid-cols-3 md:grid-cols-1'>
-              <p className='text-gray-600 py-2 flex items-center'>
+              <p className='flex items-center py-2 text-gray-600'>
                 <RiRadioButtonFill className='pr-1' /> Laravel
               </p>
-              <p className='text-gray-600 py-2 flex items-center'>
+              <p className='flex items-center py-2 text-gray-600'>
                 <RiRadioButtonFill className='pr-1' /> J-Query
               </p>
-              <p className='text-gray-600 py-2 flex items-center'>
+              <p className='flex items-center py-2 text-gray-600'>
                 <RiRadioButtonFill className='pr-1' /> Stripe
               </p>
-              <p className='text-gray-600 py-2 flex items-center'>
+              <p className='flex items-center py-2 text-gray-600'>
                 <RiRadioButtonFill className='pr-1' />Ubuntu Server
               </p>
             </div>
