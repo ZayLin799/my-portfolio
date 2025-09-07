@@ -5,7 +5,7 @@ import Viabells from "../public/assets/projects/viabells.png";
 import LilImg from "../public/assets/projects/little-myanmar.jpg";
 import Sdax from "../public/assets/projects/sdax.png";
 import AmSKin from "../public/assets/projects/am-skin.png";
-import JPauctionsheet from "../public/assets/projects/jp-auctionsheet.png";
+import JPauctionsheet from "../public/assets/projects/jpauctionsheet.png";
 import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
@@ -16,7 +16,7 @@ const Projects = () => {
           OutSource Projects
         </p>
         <h2 className="py-4">What I&apos;ve Built</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid gap-8 md:grid-cols-2">
           <ProjectItem
             title="Little Myanmar"
             backgroundImg={LilImg}
@@ -36,7 +36,7 @@ const Projects = () => {
           Fulltime job Projects
         </p>
         <h2 className="py-4">What I&apos;ve Paticipated</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid gap-8 md:grid-cols-2">
           <ProjectItem
             title="Sdax"
             backgroundImg={Sdax}
