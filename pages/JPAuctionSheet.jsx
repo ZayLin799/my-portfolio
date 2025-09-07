@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import jpImg from "../public/assets/projects/jp-auction.jpg"; // <- update if your image name/path differs
+import jpImg from "../public/assets/projects/jpauctionsheet.png"; // <- update if your image name/path differs
 import { RiRadioButtonFill } from "react-icons/ri";
 import Link from "next/link";
 
