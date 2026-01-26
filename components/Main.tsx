@@ -44,13 +44,11 @@ const Main = () => {
                 <AiOutlineMail />
               </div>
             </Link>
-            <Link href="/Zay-Lin-Htet-CV.pdf" passHref>
-              <a target="_blank">
-                <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110">
-                  <BsFillPersonLinesFill />
-                </div>
-              </a>
-            </Link>
+            <a href="/Zay-Lin-Htet-CV.pdf" target="_blank" rel="noreferrer">
+              <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110">
+                <BsFillPersonLinesFill />
+              </div>
+            </a>
           </div>
         </div>
       </div>

@@ -56,7 +56,7 @@ const Navbar = () => {
     >
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
         <div>
-          
+
         </div>
         {/* <Link href='/'>
           <a>
@@ -79,6 +79,9 @@ const Navbar = () => {
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
               <Link href='/#skills'>Skills</Link>
+            </li>
+            <li className='ml-10 text-sm uppercase hover:border-b'>
+              <Link href='/#experience'>Experience</Link>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
               <Link href='/#projects'>Projects</Link>
@@ -116,7 +119,7 @@ const Navbar = () => {
           <div>
             <div className='flex w-full items-center justify-between'>
               {/* <Link href='/'> */}
-                {/* <a>
+              {/* <a>
                   <Image
                     src={NavLogo}
                     width='87'
@@ -153,6 +156,11 @@ const Navbar = () => {
               <Link href='/#skills'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                   Skills
+                </li>
+              </Link>
+              <Link href='/#experience'>
+                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  Experience
                 </li>
               </Link>
               <Link href='/#projects'>

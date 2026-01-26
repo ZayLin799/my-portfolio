@@ -3,10 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { AiOutlineMail } from "react-icons/ai";
+import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+import { FaGithub, FaLinkedinIn, FaFlag } from "react-icons/fa";
+import { HiOutlineChevronDoubleUp, HiOutlineLocationMarker, HiOutlineGlobeAlt } from "react-icons/hi";
 import ContactImg from "../public/assets/contact.jpg";
 
 // Firestore
@@ -75,6 +75,24 @@ const Contact = () => {
               <div>
                 <h2 className="py-2">Zay Lin Htet</h2>
                 <p>Full Stack Software Developer</p>
+                <div className="py-4 space-y-2">
+                  <p className="flex items-center gap-2">
+                    <AiOutlineMail className="text-[#5651e5]" />
+                    <span>zaylin13.dev@gmail.com</span>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <AiOutlinePhone className="text-[#5651e5]" />
+                    <span>+66 889131528</span>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <HiOutlineLocationMarker className="text-[#5651e5]" />
+                    <span>Thailand</span>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <FaFlag className="text-[#5651e5]" />
+                    <span>Myanmar</span>
+                  </p>
+                </div>
                 <p className="py-4">
                   I am available for freelance or full-time positions. Contact
                   me and let&apos;s talk.
@@ -106,13 +124,11 @@ const Contact = () => {
                     <AiOutlineMail />
                   </div>
 
-                  <Link href="/Zay-Lin-Htet-CV.pdf" passHref>
-                    <a target="_blank">
-                      <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110">
-                        <BsFillPersonLinesFill />
-                      </div>
-                    </a>
-                  </Link>
+                  <a href="/Zay-Lin-Htet-CV.pdf" target="_blank" rel="noreferrer">
+                    <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110">
+                      <BsFillPersonLinesFill />
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -175,7 +191,7 @@ const Contact = () => {
                   <label className="py-2 text-sm uppercase">Message</label>
                   <textarea
                     className="p-3 border-2 border-gray-300 rounded-lg"
-                    rows="10"
+                    rows={10}
                     name="message"
                     value={form.message}
                     onChange={onChange}
@@ -192,11 +208,10 @@ const Contact = () => {
 
                 {toast && (
                   <p
-                    className={`mt-3 text-sm ${
-                      toast.type === "success"
-                        ? "text-green-600"
-                        : "text-red-600"
-                    }`}
+                    className={`mt-3 text-sm ${toast.type === "success"
+                      ? "text-green-600"
+                      : "text-red-600"
+                      }`}
                   >
                     {toast.msg}
                   </p>
@@ -208,14 +223,12 @@ const Contact = () => {
 
         <div className="flex justify-center py-12">
           <Link href="/">
-            <a>
-              <div className="p-4 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110">
-                <HiOutlineChevronDoubleUp
-                  className="text-[#050506]"
-                  size={30}
-                />
-              </div>
-            </a>
+            <div className="p-4 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110">
+              <HiOutlineChevronDoubleUp
+                className="text-[#050506]"
+                size={30}
+              />
+            </div>
           </Link>
         </div>
       </div>

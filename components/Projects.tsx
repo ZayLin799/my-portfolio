@@ -6,6 +6,8 @@ import LilImg from "../public/assets/projects/little-myanmar.jpg";
 import Sdax from "../public/assets/projects/sdax.png";
 import AmSKin from "../public/assets/projects/am-skin.png";
 import JPauctionsheet from "../public/assets/projects/jpauctionsheet.png";
+import YunHome from "../public/assets/projects/YunHome.png";
+import AutoVinHub from "../public/assets/projects/AutoVinHub.png";
 import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
@@ -18,6 +20,12 @@ const Projects = () => {
         <h2 className="py-4">What I&apos;ve Built</h2>
         <div className="grid gap-8 md:grid-cols-2">
           <ProjectItem
+            title="AutoVinHub"
+            backgroundImg={AutoVinHub}
+            projectUrl="/autovinhub"
+            tech="Next.js / Laravel"
+          />
+          <ProjectItem
             title="Little Myanmar"
             backgroundImg={LilImg}
             projectUrl="/littleMyanmar"
@@ -28,6 +36,12 @@ const Projects = () => {
             backgroundImg={JPauctionsheet}
             projectUrl="/JPAuctionSheet"
             tech="Laravel"
+          />
+          <ProjectItem
+            title="Yun Home Renovation"
+            backgroundImg={YunHome}
+            projectUrl="/yunhome"
+            tech="Next.js / TypeScript / Tailwind"
           />
         </div>
       </div>
