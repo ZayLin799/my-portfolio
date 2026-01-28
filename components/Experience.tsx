@@ -100,72 +100,87 @@ const Experience = () => {
     ];
 
     return (
-        <div id="experience" className="w-full p-2 py-16">
-            <div className="max-w-[1240px] m-auto flex flex-col justify-center h-full">
-                <p className="text-xl tracking-widest uppercase text-[#5651e5]">
-                    Experience & Education
-                </p>
-                <h2 className="py-4">Professional Path</h2>
+        <section id="experience" className="section-padding relative">
+            <div className="max-w-[1240px] m-auto px-6 relative z-10">
+                <div className="space-y-4 mb-16">
+                    <p className="uppercase text-sm tracking-[0.4em] text-primary font-bold">
+                        Journey
+                    </p>
+                    <h2 className="leading-tight text-white">Experience & <span className="text-primary italic">Education</span></h2>
+                </div>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-2 gap-16">
                     {/* Experience Section */}
-                    <div className="col-span-1">
-                        <div className="flex items-center py-4">
-                            <MdWork className="text-[#5651e5] mr-2" size={30} />
-                            <h3 className="text-2xl font-bold">Experience</h3>
+                    <div className="space-y-10">
+                        <div className="flex items-center gap-4">
+                            <div className="w-12 h-12 rounded-2xl glass flex items-center justify-center text-primary">
+                                <MdWork size={24} />
+                            </div>
+                            <h3 className="text-2xl font-bold tracking-tight text-white">Professional Exp</h3>
                         </div>
-                        <div className="space-y-8">
+                        <div className="space-y-8 relative before:absolute before:left-[23px] before:top-4 before:bottom-4 before:w-[2px] before:bg-white/5">
                             {experiences.map((exp, index) => (
-                                <div key={index} className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 bg-white">
-                                    <div className="flex flex-col sm:flex-row justify-between mb-2">
-                                        <span className="text-sm font-semibold text-[#5651e5]">{exp.date}</span>
-                                        <span className="text-sm text-gray-500 italic">{exp.location}</span>
+                                <div key={index} className="relative pl-16 group">
+                                    <div className="absolute left-0 top-1.5 w-12 h-12 rounded-xl glass border-white/10 group-hover:border-primary/50 flex items-center justify-center transition-all bg-[#1a2f3a] z-10">
+                                        <div className="w-2 h-2 rounded-full bg-primary" />
                                     </div>
-                                    <h4 className="text-lg font-bold text-gray-800">{exp.title}</h4>
-                                    <p className="text-md font-medium text-gray-600 mb-4">{exp.company}</p>
-                                    <ul className="list-disc list-inside space-y-2">
-                                        {exp.description.map((item, i) => (
-                                            <li key={i} className="text-gray-600 text-sm leading-relaxed">
-                                                {item}
-                                            </li>
-                                        ))}
-                                    </ul>
+                                    <div className="glass-card hover:border-primary/20 bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10">
+                                        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
+                                            <span className="text-xs font-black tracking-widest text-primary uppercase bg-primary/5 px-3 py-1 rounded-full">{exp.date}</span>
+                                            <span className="text-xs text-slate-500 font-medium italic">{exp.location}</span>
+                                        </div>
+                                        <h4 className="text-xl font-bold text-white mb-1 tracking-tight">{exp.title}</h4>
+                                        <p className="text-sm font-semibold text-slate-400 mb-6">{exp.company}</p>
+                                        <ul className="space-y-3">
+                                            {exp.description.map((item, i) => (
+                                                <li key={i} className="text-slate-400 text-sm leading-relaxed flex gap-3">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-1.5 shrink-0" />
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </div>
                             ))}
                         </div>
                     </div>
 
-                    {/* Education & Certificates Section */}
-                    <div className="col-span-1 space-y-8">
+                    <div className="space-y-16">
                         {/* Education */}
-                        <div>
-                            <div className="flex items-center py-4">
-                                <MdSchool className="text-[#5651e5] mr-2" size={30} />
-                                <h3 className="text-2xl font-bold">Education</h3>
+                        <div className="space-y-8">
+                            <div className="flex items-center gap-4">
+                                <div className="w-12 h-12 rounded-2xl glass flex items-center justify-center text-primary">
+                                    <MdSchool size={24} />
+                                </div>
+                                <h3 className="text-2xl font-bold tracking-tight text-white">Education</h3>
                             </div>
-                            <div className="space-y-4">
+                            <div className="space-y-6">
                                 {education.map((edu, index) => (
-                                    <div key={index} className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 bg-white">
-                                        <span className="text-sm font-semibold text-[#5651e5]">{edu.date}</span>
-                                        <h4 className="text-lg font-bold text-gray-800 mt-1">{edu.degree}</h4>
-                                        <p className="text-gray-600 italic">{edu.school}</p>
+                                    <div key={index} className="glass-card bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10">
+                                        <span className="text-xs font-black tracking-widest text-primary uppercase">{edu.date}</span>
+                                        <h4 className="text-lg font-bold text-white mt-2 tracking-tight">{edu.degree}</h4>
+                                        <p className="text-sm text-slate-400 font-medium italic">{edu.school}</p>
                                     </div>
                                 ))}
                             </div>
                         </div>
 
                         {/* Certificates */}
-                        <div>
-                            <div className="flex items-center py-4">
-                                <MdCardMembership className="text-[#5651e5] mr-2" size={30} />
-                                <h3 className="text-2xl font-bold">Certificates</h3>
+                        <div className="space-y-8">
+                            <div className="flex items-center gap-4">
+                                <div className="w-12 h-12 rounded-2xl glass flex items-center justify-center text-primary">
+                                    <MdCardMembership size={24} />
+                                </div>
+                                <h3 className="text-2xl font-bold tracking-tight text-white">Certifications</h3>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {certificates.map((cert, index) => (
-                                    <div key={index} className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 bg-white">
-                                        <span className="text-sm font-semibold text-[#5651e5]">{cert.date}</span>
-                                        <h4 className="text-md font-bold text-gray-800 mt-1">{cert.title}</h4>
-                                        <p className="text-xs text-gray-600 italic">{cert.issuer}</p>
+                                    <div key={index} className="glass-card bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-colors">
+                                        <div>
+                                            <span className="text-xs font-black tracking-widest text-primary uppercase">{cert.date}</span>
+                                            <h4 className="text-md font-bold text-white mt-2 leading-snug">{cert.title}</h4>
+                                        </div>
+                                        <p className="text-xs text-slate-500 mt-4 font-medium italic">{cert.issuer}</p>
                                     </div>
                                 ))}
                             </div>
@@ -173,7 +188,7 @@ const Experience = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

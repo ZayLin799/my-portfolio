@@ -11,14 +11,29 @@ interface ProjectItemProps {
 
 const ProjectItem = ({ title, backgroundImg, tech, projectUrl }: ProjectItemProps) => {
   return (
-    <div className='relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]'>
-      <Image className='rounded-xl group-hover:opacity-10' src={backgroundImg} alt='/' />
-      <div className='hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
-        <h3 className='text-2xl text-white tracking-wider text-center'>{title}</h3>
-        <p className='pb-4 pt-2 text-white text-center'>{tech}</p>
-        <Link href={projectUrl}>
-          <p className='text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer'>More Info</p>
-        </Link>
+    <div className='relative group h-auto w-full glass-card overflow-hidden p-0 border-white/5'>
+      <div className='relative h-full w-full overflow-hidden rounded-2xl'>
+        <Image
+          className='transition-transform duration-700 group-hover:scale-110 grayscale-[0.5] group-hover:grayscale-0 w-full h-auto'
+          src={backgroundImg}
+          alt={title}
+          width={700}
+          height={400}
+        />
+        {/* Overlay */}
+        <div className='absolute inset-0 bg-dark/60 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-center p-6 text-center'>
+          <div className='translate-y-4 group-hover:translate-y-0 transition-transform duration-500 space-y-4'>
+            <h3 className='text-2xl font-black text-white tracking-tight'>{title}</h3>
+            <p className='text-primary font-bold text-xs tracking-widest uppercase'>{tech}</p>
+            <div className='pt-4'>
+              <Link href={projectUrl}>
+                <button className='px-6 py-2.5 rounded-full text-sm font-bold bg-white text-dark hover:bg-primary hover:text-white transition-colors'>
+                  View Case Study
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -11,26 +11,75 @@ html {
 
 @layer base {
   body {
-    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide
+    @apply bg-dark text-slate-300 tracking-wide overflow-x-hidden;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(45, 212, 191, 0.1) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(13, 148, 136, 0.1) 0px, transparent 50%);
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold
+    @apply font-bold text-white tracking-tight;
   }
 
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl font-[Raleway]
+    @apply text-5xl sm:text-6xl md:text-7xl lg:text-8xl;
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl
+    @apply text-4xl sm:text-5xl;
   }
   
   li {
-    @apply cursor-pointer
+    @apply cursor-pointer transition-all duration-300;
   }
 
   button {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white
+    @apply px-8 py-3 rounded-full font-semibold uppercase tracking-wider bg-gradient-to-r from-primary to-secondary text-white shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 active:scale-95 transition-all duration-300;
   }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20;
+  }
+  
+  .glass-card {
+    @apply glass rounded-2xl p-6 hover:border-primary/30 transition-all duration-500 hover:shadow-primary/10;
+  }
+
+  .nav-link {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full hover:text-primary opacity-80 hover:opacity-100;
+  }
+
+  .section-padding {
+    @apply py-24 sm:py-32;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a2f3a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(45, 212, 191, 0.2);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(45, 212, 191, 0.4);
 }

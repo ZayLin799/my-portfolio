@@ -8,25 +8,28 @@ const autovinhub = () => {
     return (
         <div className="w-full">
             <div className="w-screen h-[50vh] relative">
-                <div className="absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10" />
+                <div className="absolute top-0 left-0 w-full h-[50vh] bg-dark/80 z-10 backdrop-blur-[2px]" />
                 <Image
                     className="absolute z-1"
-                    layout="fill"
-                    objectFit="cover"
                     src={AutoVinHubImg}
-                    alt="/"
+                    alt="AutoVinHub"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    priority
                 />
-                <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-                    <h2 className="py-2">AutoVinHub</h2>
-                    <h3>Next.js / Laravel</h3>
+                <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-6">
+                    <h2 className="py-2 text-5xl md:text-6xl font-black tracking-tight">AutoVinHub</h2>
+                    <h3 className="text-primary font-bold tracking-widest uppercase text-sm">Next.js / Laravel</h3>
                 </div>
             </div>
 
-            <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8">
-                <div className="col-span-4">
-                    <p>Project</p>
-                    <h2>Overview</h2>
-                    <p>
+            <div className="max-w-[1240px] mx-auto p-6 grid md:grid-cols-5 gap-12 py-16">
+                <div className="col-span-4 space-y-6">
+                    <div className="space-y-2">
+                        <p className="uppercase text-sm tracking-[0.4em] text-primary font-bold">Project</p>
+                        <h2 className="text-3xl font-bold text-white">Overview</h2>
+                    </div>
+                    <p className="text-lg text-slate-400 leading-relaxed max-w-3xl">
                         AutoVinHub is a comprehensive automotive platform providing VIN
                         decoding and vehicle history services. I developed this application
                         using Next.js for the dynamic frontend and Laravel for the robust
@@ -35,37 +38,43 @@ const autovinhub = () => {
                         for vehicle data. It is built with a focus on high performance and
                         reliability.
                     </p>
-                    <a
-                        href="https://autovinhub.com/"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <button className="px-8 py-2 mt-4">Demo</button>
-                    </a>
+                    <div className="pt-4">
+                        <a
+                            href="https://autovinhub.com/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <button className="px-10">Live Demo</button>
+                        </a>
+                    </div>
                 </div>
-                <div className="col-span-4 py-4 shadow-xl md:col-span-1 shadow-gray-400 rounded-xl">
-                    <div className="p-2">
-                        <p className="pb-2 font-bold text-center">Technologies</p>
-                        <div className="grid grid-cols-3 md:grid-cols-1">
-                            <p className="flex items-center py-2 text-gray-600">
-                                <RiRadioButtonFill className="pr-1" /> Next.js
-                            </p>
-                            <p className="flex items-center py-2 text-gray-600">
-                                <RiRadioButtonFill className="pr-1" /> Laravel
-                            </p>
-                            <p className="flex items-center py-2 text-gray-600">
-                                <RiRadioButtonFill className="pr-1" /> Tailwind CSS
-                            </p>
-                            <p className="flex items-center py-2 text-gray-600">
-                                <RiRadioButtonFill className="pr-1" />
-                                AWS / Ubuntu
-                            </p>
+
+                <div className="col-span-4 md:col-span-1">
+                    <div className="glass-card bg-white/[0.03] space-y-6">
+                        <p className="text-xs font-black tracking-[0.2em] text-slate-500 uppercase">Technologies</p>
+                        <div className="grid grid-cols-2 md:grid-cols-1 gap-4">
+                            {[
+                                "Next.js",
+                                "Laravel",
+                                "Tailwind CSS",
+                                "AWS / Ubuntu"
+                            ].map((tech, idx) => (
+                                <p key={idx} className="flex items-center gap-3 text-slate-300 text-sm font-medium">
+                                    <RiRadioButtonFill className="text-primary" /> {tech}
+                                </p>
+                            ))}
                         </div>
                     </div>
                 </div>
-                <Link href="/#projects">
-                    <p className="underline cursor-pointer">Back</p>
-                </Link>
+
+                <div className="col-span-4">
+                    <Link href="/#projects">
+                        <span className="group flex items-center gap-2 text-slate-500 hover:text-primary transition-colors cursor-pointer font-bold">
+                            <div className="w-8 h-[1px] bg-slate-700 group-hover:bg-primary transition-all" />
+                            Back to Projects
+                        </span>
+                    </Link>
+                </div>
             </div>
         </div>
     );

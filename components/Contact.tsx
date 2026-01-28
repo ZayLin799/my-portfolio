@@ -54,185 +54,176 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="w-full lg:h-screen">
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
-        <p className="text-xl tracking-widest uppercase text-[#5651e5]">
-          Contact
-        </p>
-        <h2 className="py-4">Get In Touch</h2>
+    <section id="contact" className="section-padding relative">
+      <div className="max-w-[1240px] m-auto px-6 relative z-10 w-full">
+        <div className="space-y-4 mb-16">
+          <p className="uppercase text-sm tracking-[0.4em] text-primary font-bold">
+            Contact
+          </p>
+          <h2 className="leading-tight">Let&#39;s Start a <span className="text-primary italic">Conversation</span></h2>
+        </div>
 
-        <div className="grid gap-8 lg:grid-cols-5">
+        <div className="grid gap-12 lg:grid-cols-5">
           {/* left */}
-          <div className="w-full h-full col-span-3 p-4 shadow-xl lg:col-span-2 shadow-gray-400 rounded-xl">
-            <div className="h-full lg:p-4 ">
-              <div>
-                <Image
-                  className="duration-300 ease-in rounded-xl hover:scale-105"
-                  src={ContactImg}
-                  alt="Contact image"
-                />
-              </div>
-              <div>
-                <h2 className="py-2">Zay Lin Htet</h2>
-                <p>Full Stack Software Developer</p>
-                <div className="py-4 space-y-2">
-                  <p className="flex items-center gap-2">
-                    <AiOutlineMail className="text-[#5651e5]" />
-                    <span>zaylin13.dev@gmail.com</span>
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <AiOutlinePhone className="text-[#5651e5]" />
-                    <span>+66 889131528</span>
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <HiOutlineLocationMarker className="text-[#5651e5]" />
-                    <span>Thailand</span>
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <FaFlag className="text-[#5651e5]" />
-                    <span>Myanmar</span>
+          <div className="w-full h-full col-span-3 lg:col-span-2">
+            <div className="glass-card h-full flex flex-col justify-between">
+              <div className="space-y-8">
+                <div className="relative group overflow-hidden rounded-xl">
+                  <Image
+                    className="duration-700 ease-in-out group-hover:scale-110 group-hover:rotate-1"
+                    src={ContactImg}
+                    alt="Contact image"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-60" />
+                </div>
+
+                <div className="space-y-4">
+                  <h2 className="text-3xl font-bold tracking-tight">Zay Lin Htet</h2>
+                  <p className="text-primary font-medium tracking-wide uppercase text-xs">Full Stack Software Developer</p>
+                  <p className="text-slate-400 leading-relaxed pt-2">
+                    I am available for freelance or full-time positions. Let&#39;s collaborate on something extraordinary.
                   </p>
                 </div>
-                <p className="py-4">
-                  I am available for freelance or full-time positions. Contact
-                  me and let&apos;s talk.
-                </p>
+
+                <div className="space-y-4 pt-4 border-t border-white/5">
+                  {[
+                    { Icon: AiOutlineMail, text: "zaylin13.dev@gmail.com" },
+                    { Icon: AiOutlinePhone, text: "+66 889131528" },
+                    { Icon: HiOutlineLocationMarker, text: "Thailand" },
+                    { Icon: FaFlag, text: "Myanmar" }
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-center gap-4 text-slate-300 group cursor-default">
+                      <div className="w-10 h-10 rounded-xl glass border-white/5 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                        <item.Icon size={18} />
+                      </div>
+                      <span className="text-sm font-medium tracking-wide">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div>
-                <p className="pt-8 uppercase">Connect With Me</p>
-                <div className="flex items-center justify-between py-4">
-                  <a
-                    href="https://www.linkedin.com/in/zay-lin-htet/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110">
-                      <FaLinkedinIn />
-                    </div>
-                  </a>
-                  <a
-                    href="https://github.com/ZayLin799"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110">
-                      <FaGithub />
-                    </div>
-                  </a>
 
-                  <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110">
-                    <AiOutlineMail />
-                  </div>
-
-                  <a href="/Zay-Lin-Htet-CV.pdf" target="_blank" rel="noreferrer">
-                    <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110">
-                      <BsFillPersonLinesFill />
-                    </div>
-                  </a>
+              <div className="pt-12">
+                <p className="uppercase text-xs font-black tracking-[0.2em] text-slate-500 mb-6">Connect With Me</p>
+                <div className="flex items-center gap-4">
+                  {[
+                    { Icon: FaLinkedinIn, href: "https://www.linkedin.com/in/zay-lin-htet/" },
+                    { Icon: FaGithub, href: "https://github.com/ZayLin799" },
+                    { Icon: BsFillPersonLinesFill, href: "/Zay-Lin-Htet-CV.pdf" }
+                  ].map((item, idx) => (
+                    <a
+                      key={idx}
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group"
+                    >
+                      <div className="w-12 h-12 rounded-xl glass border-white/5 flex items-center justify-center text-slate-400 group-hover:text-primary group-hover:border-primary/50 transition-all">
+                        <item.Icon size={20} />
+                      </div>
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
 
           {/* right */}
-          <div className="w-full h-auto col-span-3 shadow-xl shadow-gray-400 rounded-xl lg:p-4">
-            <div className="p-4">
-              <form onSubmit={onSubmit}>
-                <div className="grid w-full gap-4 py-2 md:grid-cols-2">
-                  <div className="flex flex-col">
-                    <label className="py-2 text-sm uppercase">Name</label>
+          <div className="w-full h-auto col-span-3">
+            <div className="glass-card bg-white/[0.03]">
+              <form onSubmit={onSubmit} className="space-y-6">
+                <div className="grid w-full gap-6 md:grid-cols-2">
+                  <div className="flex flex-col space-y-2">
+                    <label className="text-xs font-black tracking-widest uppercase text-slate-500 ml-1">Name</label>
                     <input
-                      className="flex p-3 border-2 border-gray-300 rounded-lg"
+                      className="w-full p-4 rounded-xl glass bg-white/[0.02] border-white/5 focus:border-primary/50 outline-none transition-all text-white placeholder:text-slate-600"
                       type="text"
                       name="name"
+                      placeholder="Your Name"
                       value={form.name}
                       onChange={onChange}
                       required
                     />
                   </div>
-                  <div className="flex flex-col">
-                    <label className="py-2 text-sm uppercase">
-                      Phone Number
-                    </label>
+                  <div className="flex flex-col space-y-2">
+                    <label className="text-xs font-black tracking-widest uppercase text-slate-500 ml-1">Phone</label>
                     <input
-                      className="flex p-3 border-2 border-gray-300 rounded-lg"
+                      className="w-full p-4 rounded-xl glass bg-white/[0.02] border-white/5 focus:border-primary/50 outline-none transition-all text-white placeholder:text-slate-600"
                       type="text"
                       name="phone"
+                      placeholder="Phone Number"
                       value={form.phone}
                       onChange={onChange}
                     />
                   </div>
                 </div>
 
-                <div className="flex flex-col py-2">
-                  <label className="py-2 text-sm uppercase">Email</label>
+                <div className="flex flex-col space-y-2">
+                  <label className="text-xs font-black tracking-widest uppercase text-slate-500 ml-1">Email</label>
                   <input
-                    className="flex p-3 border-2 border-gray-300 rounded-lg"
+                    className="w-full p-4 rounded-xl glass bg-white/[0.02] border-white/5 focus:border-primary/50 outline-none transition-all text-white placeholder:text-slate-600"
                     type="email"
                     name="email"
+                    placeholder="example@email.com"
                     value={form.email}
                     onChange={onChange}
                     required
                   />
                 </div>
 
-                <div className="flex flex-col py-2">
-                  <label className="py-2 text-sm uppercase">Subject</label>
+                <div className="flex flex-col space-y-2">
+                  <label className="text-xs font-black tracking-widest uppercase text-slate-500 ml-1">Subject</label>
                   <input
-                    className="flex p-3 border-2 border-gray-300 rounded-lg"
+                    className="w-full p-4 rounded-xl glass bg-white/[0.02] border-white/5 focus:border-primary/50 outline-none transition-all text-white placeholder:text-slate-600"
                     type="text"
                     name="subject"
+                    placeholder="Project Inquiry"
                     value={form.subject}
                     onChange={onChange}
                   />
                 </div>
 
-                <div className="flex flex-col py-2">
-                  <label className="py-2 text-sm uppercase">Message</label>
+                <div className="flex flex-col space-y-2">
+                  <label className="text-xs font-black tracking-widest uppercase text-slate-500 ml-1">Message</label>
                   <textarea
-                    className="p-3 border-2 border-gray-300 rounded-lg"
-                    rows={10}
+                    className="w-full p-4 rounded-xl glass bg-white/[0.02] border-white/5 focus:border-primary/50 outline-none transition-all text-white placeholder:text-slate-600 resize-none"
+                    rows={6}
                     name="message"
+                    placeholder="Tell me about your project..."
                     value={form.message}
                     onChange={onChange}
                     required
                   />
                 </div>
 
-                <button
-                  className="w-full p-4 mt-4 text-gray-100"
-                  disabled={loading}
-                >
-                  {loading ? "Sending…" : "Send Message"}
-                </button>
+                <div className="pt-4">
+                  <button
+                    className="w-full py-4 text-sm font-black tracking-[0.2em] shadow-primary/20"
+                    disabled={loading}
+                  >
+                    {loading ? "SENDING MESSAGE..." : "SEND MESSAGE"}
+                  </button>
+                </div>
 
                 {toast && (
-                  <p
-                    className={`mt-3 text-sm ${toast.type === "success"
-                      ? "text-green-600"
-                      : "text-red-600"
-                      }`}
-                  >
+                  <div className={`p-4 rounded-xl glass border-none text-center ${toast.type === "success" ? "bg-green-500/10 text-green-400" : "bg-red-500/10 text-red-400"
+                    }`}>
                     {toast.msg}
-                  </p>
+                  </div>
                 )}
               </form>
             </div>
           </div>
         </div>
 
-        <div className="flex justify-center py-12">
+        <div className="flex justify-center pt-24">
           <Link href="/">
-            <div className="p-4 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110">
-              <HiOutlineChevronDoubleUp
-                className="text-[#050506]"
-                size={30}
-              />
+            <div className="w-16 h-16 rounded-2xl glass border-white/5 flex items-center justify-center text-primary hover:-translate-y-2 transition-all cursor-pointer shadow-lg shadow-primary/5">
+              <HiOutlineChevronDoubleUp size={24} />
             </div>
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

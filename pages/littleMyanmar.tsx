@@ -8,68 +8,70 @@ const property = () => {
   return (
     <div className="w-full">
       <div className="w-screen h-[50vh] relative">
-        <div className="absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10" />
+        <div className="absolute top-0 left-0 w-full h-[50vh] bg-dark/80 z-10 backdrop-blur-[2px]" />
         <Image
           className="absolute z-1"
-          layout="fill"
-          objectFit="cover"
           src={lilImg}
-          alt="/"
+          alt="Little Myanmar"
+          fill
+          style={{ objectFit: 'cover' }}
+          priority
         />
-        <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-          <h2 className="py-2">Little Myanmar</h2>
-          <h3>Laravel</h3>
+        <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-6">
+          <h2 className="py-2 text-5xl md:text-6xl font-black tracking-tight">Little Myanmar</h2>
+          <h3 className="text-primary font-bold tracking-widest uppercase text-sm">Laravel / PHP / Stripe</h3>
         </div>
       </div>
 
-      <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8">
-        <div className="col-span-4">
-          <p>Project</p>
-          <h2>Overview</h2>
-          <p>
-            This application was developed using Laravel and is hosted on a
-            Digital Ocean Droplet Ubuntu Server. Little Myanmar is a Myanmar
-            restaurant that has been launched in New York. In the system, users
-            are able to view two types of menus: normal menu and catering menu.
-            Users can add both menus to the cart and proceed to checkout using
-            the payment method (Stripe). There is also a login and registration
-            system, but users can order from the menu without creating an
-            account in the system. If users create accounts in the system, they
-            will receive promotions and other benefits. There are also pages
-            about of the restaurant and reviews from famous food review
-            websites.
+      <div className="max-w-[1240px] mx-auto p-6 grid md:grid-cols-5 gap-12 py-16">
+        <div className="col-span-4 space-y-6">
+          <div className="space-y-2">
+            <p className="uppercase text-sm tracking-[0.4em] text-primary font-bold">Project</p>
+            <h2 className="text-3xl font-bold text-white">Overview</h2>
+          </div>
+          <p className="text-lg text-slate-400 leading-relaxed max-w-3xl">
+            Little Myanmar is a full-featured restaurant platform developed using Laravel.
+            The system handles complex menu structures (normal and catering),
+            secure online ordering via Stripe, and a dual guest/member checkout experience.
+            Hosted on customized Ubuntu instances for maximum reliability.
           </p>
-          <a
-            href="https://littlemyanamar.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button className="px-8 py-2 mt-4">Demo</button>
-          </a>
+          <div className="pt-4">
+            <a
+              href="https://littlemyanamar.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="px-10">Live Demo</button>
+            </a>
+          </div>
         </div>
-        <div className="col-span-4 py-4 shadow-xl md:col-span-1 shadow-gray-400 rounded-xl">
-          <div className="p-2">
-            <p className="pb-2 font-bold text-center">Technologies</p>
-            <div className="grid grid-cols-3 md:grid-cols-1">
-              <p className="flex items-center py-2 text-gray-600">
-                <RiRadioButtonFill className="pr-1" /> Laravel
-              </p>
-              <p className="flex items-center py-2 text-gray-600">
-                <RiRadioButtonFill className="pr-1" /> J-Query
-              </p>
-              <p className="flex items-center py-2 text-gray-600">
-                <RiRadioButtonFill className="pr-1" /> Stripe
-              </p>
-              <p className="flex items-center py-2 text-gray-600">
-                <RiRadioButtonFill className="pr-1" />
-                AWS / Ubuntu
-              </p>
+
+        <div className="col-span-4 md:col-span-1">
+          <div className="glass-card bg-white/[0.03] space-y-6">
+            <p className="text-xs font-black tracking-[0.2em] text-slate-500 uppercase">Technologies</p>
+            <div className="grid grid-cols-2 md:grid-cols-1 gap-4">
+              {[
+                "Laravel",
+                "J-Query",
+                "Stripe",
+                "AWS / Ubuntu"
+              ].map((tech, idx) => (
+                <p key={idx} className="flex items-center gap-3 text-slate-300 text-sm font-medium">
+                  <RiRadioButtonFill className="text-primary" /> {tech}
+                </p>
+              ))}
             </div>
           </div>
         </div>
-        <Link href="/#projects">
-          <p className="underline cursor-pointer">Back</p>
-        </Link>
+
+        <div className="col-span-4">
+          <Link href="/#projects">
+            <span className="group flex items-center gap-2 text-slate-500 hover:text-primary transition-colors cursor-pointer font-bold">
+              <div className="w-8 h-[1px] bg-slate-700 group-hover:bg-primary transition-all" />
+              Back to Projects
+            </span>
+          </Link>
+        </div>
       </div>
     </div>
   );

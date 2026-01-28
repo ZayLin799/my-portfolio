@@ -12,66 +12,80 @@ import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
   return (
-    <div id="projects" className="w-full">
-      <div className="max-w-[1240px] mx-auto px-2 py-16">
-        <p className="text-xl tracking-widest uppercase text-[#5651e5]">
-          OutSource Projects
-        </p>
-        <h2 className="py-4">What I&apos;ve Built</h2>
-        <div className="grid gap-8 md:grid-cols-2">
-          <ProjectItem
-            title="AutoVinHub"
-            backgroundImg={AutoVinHub}
-            projectUrl="/autovinhub"
-            tech="Next.js / Laravel"
-          />
-          <ProjectItem
-            title="Little Myanmar"
-            backgroundImg={LilImg}
-            projectUrl="/littleMyanmar"
-            tech="Laravel"
-          />
-          <ProjectItem
-            title="JP Auction Sheet"
-            backgroundImg={JPauctionsheet}
-            projectUrl="/JPAuctionSheet"
-            tech="Laravel"
-          />
-          <ProjectItem
-            title="Yun Home Renovation"
-            backgroundImg={YunHome}
-            projectUrl="/yunhome"
-            tech="Next.js / TypeScript / Tailwind"
-          />
+    <section id="projects" className="section-padding relative">
+      <div className="max-w-[1240px] mx-auto px-6 relative z-10 w-full">
+        <div className="space-y-4 mb-16">
+          <p className="uppercase text-sm tracking-[0.4em] text-primary font-bold">
+            Portfolio
+          </p>
+          <h2 className="leading-tight text-white">Featured <span className="text-primary italic">Projects</span></h2>
+        </div>
+
+        <div className="space-y-32">
+          {/* Outsource Projects */}
+          <div className="space-y-12">
+            <div className="flex items-center gap-4">
+              <span className="w-12 h-[1px] bg-primary/30" />
+              <h3 className="text-xl font-bold tracking-widest uppercase text-slate-500">OutSource Projects</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-10">
+              <ProjectItem
+                title="AutoVinHub"
+                backgroundImg={AutoVinHub}
+                projectUrl="/autovinhub"
+                tech="Next.js / Laravel"
+              />
+              <ProjectItem
+                title="Little Myanmar"
+                backgroundImg={LilImg}
+                projectUrl="/littleMyanmar"
+                tech="Laravel"
+              />
+              <ProjectItem
+                title="JP Auction Sheet"
+                backgroundImg={JPauctionsheet}
+                projectUrl="/JPAuctionSheet"
+                tech="Laravel"
+              />
+              <ProjectItem
+                title="Yun Home Renovation"
+                backgroundImg={YunHome}
+                projectUrl="/yunhome"
+                tech="Next.js / TypeScript / Tailwind"
+              />
+            </div>
+          </div>
+
+          {/* Fulltime Projects */}
+          <div className="space-y-12">
+            <div className="flex items-center gap-4">
+              <span className="w-12 h-[1px] bg-primary/30" />
+              <h3 className="text-xl font-bold tracking-widest uppercase text-slate-500">Fulltime job Projects</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-10">
+              <ProjectItem
+                title="Sdax"
+                backgroundImg={Sdax}
+                projectUrl="/sdax"
+                tech="React / Java (Spring WebFlux)"
+              />
+              <ProjectItem
+                title="Viabells"
+                backgroundImg={Viabells}
+                projectUrl="/viabell"
+                tech="Next.js"
+              />
+              <ProjectItem
+                title="A.M Skincare"
+                backgroundImg={AmSKin}
+                projectUrl="/amSkin"
+                tech="Wordpress / PHP"
+              />
+            </div>
+          </div>
         </div>
       </div>
-      <div className="max-w-[1240px] mx-auto px-2 py-16">
-        <p className="text-xl tracking-widest uppercase text-[#5651e5]">
-          Fulltime job Projects
-        </p>
-        <h2 className="py-4">What I&apos;ve Paticipated</h2>
-        <div className="grid gap-8 md:grid-cols-2">
-          <ProjectItem
-            title="Sdax"
-            backgroundImg={Sdax}
-            projectUrl="/sdax"
-            tech="React / Java (Spring WebFlux)"
-          />
-          <ProjectItem
-            title="Viabells"
-            backgroundImg={Viabells}
-            projectUrl="/viabell"
-            tech="Next.js"
-          />
-          <ProjectItem
-            title="A.M Skincare"
-            backgroundImg={AmSKin}
-            projectUrl="/amSkin"
-            tech="Wordpress / PHP"
-          />
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 

@@ -10,40 +10,58 @@ const About = () => {
   );
 
   return (
-    <div id="about" className="flex items-center w-full p-2 py-16 md:h-screen">
-      <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
-        <div className="col-span-2">
-          <p className="uppercase text-xl tracking-widest text-[#5651e5]">
-            About
-          </p>
-          <h2 className="py-4">Who I Am</h2>
-          <p className="py-2 text-gray-600">
-            A highly motivated and adaptable Sofware Developer with{" "}
-            {yearsOfExperience}+ years of experience designing and implementing
-            reliable, scalable, and secure web applications. Proficient in
-            backend technologies including Node.js, Nest.js, Laravel (PHP) , and
-            database design, with expertise in RESTful APIs,
-            authentication/authorization, and cloud deployment . Adept at
-            building high-performance backend systems that drive user-centric
-            solutions across diverse industries. Additionally skilled in Next.js
-            and React for developing modern, responsive front-end interfaces
-            when needed. Experienced working in fast-paced, multicultural teams,
-            applying agile best practices, and writing clean, maintainable code.
-            Strong problem-solving mindset with a proven ability to optimize
-            performance, ensure system reliability, and deliver high-quality
-            results across all stages of the software development lifecycle.
-          </p>
-          <Link href="/#projects">
-            <p className="py-2 text-gray-600 underline cursor-pointer">
-              Check out some of my latest projects.
+    <section id="about" className="section-padding relative">
+      <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-16 px-6 relative z-10">
+        <div className="col-span-2 space-y-8">
+          <div className="space-y-2">
+            <p className="uppercase text-sm tracking-[0.4em] text-primary font-bold">
+              About Me
             </p>
-          </Link>
+            <h2 className="leading-tight">Engineering Digital <span className="text-primary italic">Excellence</span></h2>
+          </div>
+
+          <div className="glass-card leading-relaxed text-slate-400 space-y-4">
+            <p>
+              I am a highly motivated and adaptable Software Developer with{" "}
+              <span className="text-white font-semibold">{yearsOfExperience}+ years</span> of experience
+              designing and implementing high-performance systems.
+            </p>
+            <p>
+              My expertise lies in building robust backend architectures using <span className="text-primary font-medium">Node.js, Nest.js, and Laravel</span>,
+              complemented by state-of-the-art frontend development with <span className="text-primary font-medium">Next.js and React</span>.
+            </p>
+            <p>
+              I believe in writing clean, maintainable code and building products that solve real-world
+              problems while delivering a premium user experience.
+            </p>
+          </div>
+
+          <div className="pt-4">
+            <Link href="/#projects">
+              <span className="group flex items-center gap-2 text-primary font-bold cursor-pointer">
+                View My Latest Projects
+                <div className="w-8 h-[2px] bg-primary group-hover:w-12 transition-all duration-300" />
+              </span>
+            </Link>
+          </div>
         </div>
-        <div className="flex items-center justify-center w-full h-auto p-4 m-auto duration-300 ease-in shadow-xl shadow-gray-400 rounded-xl hover:scale-105">
-          <Image src={AboutImg} className="rounded-xl" alt="/" />
+
+        <div className="hidden md:flex flex-col items-center justify-center">
+          <div className="relative group">
+            <div className="absolute -inset-4 bg-gradient-to-tr from-primary to-secondary rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity blur-2xl" />
+            <div className="relative glass p-4 rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src={AboutImg}
+                className="rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                alt="Zay Lin Htet"
+              />
+            </div>
+            {/* Decorative dots */}
+            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-[radial-gradient(#2dd4bf_2px,transparent_2px)] [background-size:12px_12px] opacity-20" />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

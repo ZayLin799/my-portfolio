@@ -8,54 +8,69 @@ const crypto = () => {
   return (
     <div className='w-full'>
       <div className='w-screen h-[50vh] relative'>
-        <div className='absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10' />
+        <div className='absolute top-0 left-0 w-full h-[50vh] bg-dark/80 z-10 backdrop-blur-[2px]' />
         <Image
           className='absolute z-1'
-          layout='fill'
-          objectFit='cover'
           src={Viabells}
-          alt='/'
+          alt='Viabells'
+          fill
+          style={{ objectFit: 'cover' }}
+          priority
         />
-        <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-          <h2 className='py-2'>Viabells</h2>
-          <h3>Next JS</h3>
+        <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-6'>
+          <h2 className='py-2 text-5xl md:text-6xl font-black tracking-tight'>Viabells</h2>
+          <h3 className='text-primary font-bold tracking-widest uppercase text-sm'>Next JS / Material UI</h3>
         </div>
       </div>
 
-      <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8'>
-        <div className='col-span-4'>
-          <p>Project</p>
-          <h2>Overview</h2>
-          <p>
-            I built this app to demonstrate the content and services of VIABELLS PTE. LTD. 
-            I used only next.js for both server side and client side. And also used the MUI for UI components.
+      <div className='max-w-[1240px] mx-auto p-6 grid md:grid-cols-5 gap-12 py-16'>
+        <div className='col-span-4 space-y-6'>
+          <div className='space-y-2'>
+            <p className='uppercase text-sm tracking-[0.4em] text-primary font-bold'>Project</p>
+            <h2 className='text-3xl font-bold text-white'>Overview</h2>
+          </div>
+          <p className='text-lg text-slate-400 leading-relaxed max-w-3xl'>
+            I developed the corporate platform for VIABELLS PTE. LTD. using Next.js.
+            The project leverages Material UI for a polished, professional design and
+            is optimized for server-side rendering to ensure peak performance and SEO.
           </p>
-          <a
-            href='https://www.viabells.com/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <button className='px-8 py-2 mt-4'>Demo</button>
-          </a>
-
+          <div className="pt-4">
+            <a
+              href='https://www.viabells.com/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <button className='px-10'>Live Demo</button>
+            </a>
+          </div>
         </div>
-        <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4'>
-          <div className='p-2'>
-            <p className='text-center font-bold pb-2'>Technologies</p>
-            <div className='grid grid-cols-3 md:grid-cols-1 '>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Next.js
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> MUI
-              </p>
-             
+
+        <div className='col-span-4 md:col-span-1'>
+          <div className='glass-card bg-white/[0.03] space-y-6'>
+            <p className='text-xs font-black tracking-[0.2em] text-slate-500 uppercase'>Technologies</p>
+            <div className='grid grid-cols-2 md:grid-cols-1 gap-4'>
+              {[
+                "Next.js",
+                "Material UI",
+                "React Icons",
+                "Vercel"
+              ].map((tech, idx) => (
+                <p key={idx} className="flex items-center gap-3 text-slate-300 text-sm font-medium">
+                  <RiRadioButtonFill className="text-primary" /> {tech}
+                </p>
+              ))}
             </div>
           </div>
         </div>
-        <Link href='/#projects'>
-          <p className='underline cursor-pointer'>Back</p>
-        </Link>
+
+        <div className='col-span-4'>
+          <Link href='/#projects'>
+            <span className="group flex items-center gap-2 text-slate-500 hover:text-primary transition-colors cursor-pointer font-bold">
+              <div className="w-8 h-[1px] bg-slate-700 group-hover:bg-primary transition-all" />
+              Back to Projects
+            </span>
+          </Link>
+        </div>
       </div>
     </div>
   );

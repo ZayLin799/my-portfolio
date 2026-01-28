@@ -6,53 +6,68 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Main = () => {
   return (
-    <div id="home" className="w-full h-screen text-center">
-      <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
-        <div>
-          <p className="text-sm tracking-widest text-gray-600 uppercase">
-            LET&#39;S BUILD SOMETHING TOGETHER
+    <section id="home" className="w-full h-screen relative flex items-center justify-center overflow-hidden">
+      {/* Background Decorative Elements */}
+      <div className="absolute top-[20%] right-[-5%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-pulse" />
+      <div className="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px]" />
+
+      <div className="max-w-[1240px] w-full mx-auto px-6 z-10">
+        <div className="flex flex-col items-center justify-center text-center space-y-8">
+          <div className="animate-float">
+            <p className="px-4 py-1.5 rounded-full glass border border-primary/20 text-xs sm:text-sm font-bold tracking-[0.3em] text-primary uppercase inline-block">
+              LET&#39;S BUILD SOMETHING LEGENDARY
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h1 className="leading-tight">
+              Hi, I&#39;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Zay Lin Htet</span>
+            </h1>
+            <h2 className="text-slate-400 font-medium tracking-tight">
+              A <span className="text-white italic">Full Stack</span> Software Developer
+            </h2>
+          </div>
+
+          <p className="max-w-2xl text-lg sm:text-xl text-slate-400 leading-relaxed">
+            I specialize in crafting high-performance, scalable, and visually stunning digital experiences.
+            Blending solid backend engineering with modern frontend aesthetics.
           </p>
-          <h1 className="py-4 text-gray-700">
-            Hi, I&#39;m <span className="text-[#5651e5]"> Zay Lin Htet</span>
-          </h1>
-          <h1 className="py-2 text-gray-700">A Software Developer</h1>
-          <p className="py-4 text-gray-600 sm:max-w-[70%] m-auto">
-            I’m a Software Developer passionate about building reliable,
-            scalable, and user-centric web applications.
-          </p>
-          <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
-            <a
-              href="https://www.linkedin.com/in/zay-lin-htet/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110">
-                <FaLinkedinIn />
-              </div>
-            </a>
-            <a
-              href="https://github.com/ZayLin799"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110">
-                <FaGithub />
-              </div>
-            </a>
-            <Link href="/#contact">
-              <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110">
-                <AiOutlineMail />
-              </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
+            <Link href="/#projects">
+              <button className="sm:scale-110">
+                Explore Projects
+              </button>
             </Link>
-            <a href="/Zay-Lin-Htet-CV.pdf" target="_blank" rel="noreferrer">
-              <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110">
-                <BsFillPersonLinesFill />
-              </div>
-            </a>
+            <div className="flex items-center gap-4">
+              {[
+                { Icon: FaLinkedinIn, href: "https://www.linkedin.com/in/zay-lin-htet/" },
+                { Icon: FaGithub, href: "https://github.com/ZayLin799" },
+                { Icon: AiOutlineMail, href: "/#contact", isLink: true },
+                { Icon: BsFillPersonLinesFill, href: "/Zay-Lin-Htet-CV.pdf" }
+              ].map((item, idx) => (
+                <a
+                  key={idx}
+                  href={item.href}
+                  target={item.isLink ? "_self" : "_blank"}
+                  rel="noreferrer"
+                  className="group"
+                >
+                  <div className="w-14 h-14 rounded-2xl glass flex items-center justify-center text-slate-400 group-hover:text-primary group-hover:border-primary/50 group-hover:scale-110 transition-all duration-300">
+                    <item.Icon size={22} />
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce flex flex-col items-center gap-2 opacity-30">
+        <div className="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent" />
+      </div>
+    </section>
   );
 };
 

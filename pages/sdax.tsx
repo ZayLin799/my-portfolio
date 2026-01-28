@@ -8,82 +8,73 @@ const netflix = () => {
   return (
     <div className='w-full'>
       <div className='w-screen h-[50vh] relative'>
-        <div className='absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10' />
+        <div className='absolute top-0 left-0 w-full h-[50vh] bg-dark/80 z-10 backdrop-blur-[2px]' />
         <Image
           className='absolute z-1'
-          layout='fill'
-          objectFit='cover'
           src={Sdax}
-          alt='/'
+          alt='SDAX'
+          fill
+          style={{ objectFit: 'cover' }}
+          priority
         />
-        <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-          <h2 className='py-2'>Sdax (Singapore’s Digital Assets Exchange)</h2>
-          <h3>React JS / Java / Spring WebFlux</h3>
+        <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-6'>
+          <h2 className='py-2 text-5xl md:text-6xl font-black tracking-tight'>SDAX</h2>
+          <h3 className='text-primary font-bold tracking-widest uppercase text-sm'>React JS / Java / Spring WebFlux</h3>
         </div>
       </div>
 
-      <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8'>
-        <div className='col-span-4'>
-          <p>Project</p>
-          <h2>Overview</h2>
-          <p>
-            Mainly responsible for maintaining the admin dashboard, user platform, and all processes of the SDAX digital assets exchange platform.
-            Need to engage with Singaporean clients and worked with multiple repositories for microservices.
-            I have quickly learned Java Spring WebFlux within a short period. I have to understand the project's processes and flow, familiarized myself with the old code structure, and need to participate urgently in the project.
-            I have also learned the new technologies such as Docker, Maria DB, Datadog, Blockchain / Web3, Keycloak
-            and Microservices.
+      <div className='max-w-[1240px] mx-auto p-6 grid md:grid-cols-5 gap-12 py-16'>
+        <div className='col-span-4 space-y-6'>
+          <div className='space-y-2'>
+            <p className='uppercase text-sm tracking-[0.4em] text-primary font-bold'>Project</p>
+            <h2 className='text-3xl font-bold text-white'>Overview</h2>
+          </div>
+          <p className='text-lg text-slate-400 leading-relaxed max-w-3xl'>
+            SDAX is Singapore’s leading Digital Assets Exchange. During my tenure,
+            I was responsible for maintaining the admin dashboard, user platform,
+            and mission-critical microservices. My work involved rapid adoption of Java Spring WebFlux,
+            managing multiple microservice repositories, and integrating cutting-edge technologies
+            like Blockchain/Web3, Keycloak, and Datadog for institutional-grade reliability.
           </p>
-          <a
-            href='https://www.sdax.co/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <button className='px-8 py-2 mt-4'>Demo</button>
-          </a>
+          <div className="pt-4">
+            <a
+              href='https://www.sdax.co/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <button className='px-10'>Live Demo</button>
+            </a>
+          </div>
         </div>
-        <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4'>
-          <div className='p-2'>
-            <p className='text-center font-bold pb-2'>Technologies</p>
-            <div className='grid grid-cols-3 md:grid-cols-1'>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> React
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Typescripts
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Java
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Spring WebFlux
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Docker
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Maria DB
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Blockchain / Web3
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Docker
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Microservices
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Datadog
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Keycloak
-              </p>
+
+        <div className='col-span-4 md:col-span-1'>
+          <div className='glass-card bg-white/[0.03] space-y-6'>
+            <p className='text-xs font-black tracking-[0.2em] text-slate-500 uppercase'>Technologies</p>
+            <div className='grid grid-cols-2 md:grid-cols-1 gap-4'>
+              {[
+                "React",
+                "TypeScript",
+                "Java Spring",
+                "Microservices",
+                "Blockchain",
+                "Docker"
+              ].map((tech, idx) => (
+                <p key={idx} className="flex items-center gap-3 text-slate-300 text-sm font-medium">
+                  <RiRadioButtonFill className="text-primary" /> {tech}
+                </p>
+              ))}
             </div>
           </div>
         </div>
-        <Link href='/#projects'>
-          <p className='underline cursor-pointer'>Back</p>
-        </Link>
+
+        <div className='col-span-4'>
+          <Link href='/#projects'>
+            <span className="group flex items-center gap-2 text-slate-500 hover:text-primary transition-colors cursor-pointer font-bold">
+              <div className="w-8 h-[1px] bg-slate-700 group-hover:bg-primary transition-all" />
+              Back to Projects
+            </span>
+          </Link>
+        </div>
       </div>
     </div>
   );
