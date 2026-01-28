@@ -17,6 +17,7 @@ import AWS from '../public/assets/skills/aws.png';
 import Ubuntu from '../public/assets/skills/ubuntu.png';
 import Linux from '../public/assets/skills/linux.png';
 import Postgre from '../public/assets/skills/postgre.png';
+import NestJSImg from '../public/assets/skills/nestjs.png';
 
 
 const Skills = () => {
@@ -41,6 +42,7 @@ const Skills = () => {
             { img: NextJS, name: 'Next.js' },
             { img: Node, name: 'Node.js' },
             { img: Express, name: 'Express' },
+            { img: NestJSImg, name: 'Nest.js' },
             { img: MySQL, name: 'MySQL' },
             { img: Postgre, name: 'PostgreSQL' },
             { img: Mongo, name: 'MongoDB' },
