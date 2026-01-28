@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdWork, MdSchool, MdCardMembership } from "react-icons/md";
+import { RiPlayFill } from "react-icons/ri";
 
 const Experience = () => {
     const experiences = [
@@ -99,6 +100,8 @@ const Experience = () => {
         },
     ];
 
+    const [activeTab, setActiveTab] = useState(0);
+
     return (
         <section id="experience" className="section-padding relative">
             <div className="max-w-[1240px] m-auto px-6 relative z-10">
@@ -109,43 +112,67 @@ const Experience = () => {
                     <h2 className="leading-tight text-white">Experience & <span className="text-primary italic">Education</span></h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-16">
+                <div className="grid lg:grid-cols-3 gap-16">
                     {/* Experience Section */}
-                    <div className="space-y-10">
-                        <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 rounded-2xl glass flex items-center justify-center text-primary">
-                                <MdWork size={24} />
-                            </div>
-                            <h3 className="text-2xl font-bold tracking-tight text-white">Professional Exp</h3>
+                    <div className="lg:col-span-2 space-y-12">
+                        <div className="space-y-2">
+                            <p className="uppercase text-sm tracking-[0.4em] text-primary font-bold">Where I've worked</p>
+                            <h3 className="text-3xl md:text-4xl font-black tracking-tight text-white mb-8">Professional <span className="text-primary italic">Exp</span></h3>
                         </div>
-                        <div className="space-y-8 relative before:absolute before:left-[23px] before:top-4 before:bottom-4 before:w-[2px] before:bg-white/5">
-                            {experiences.map((exp, index) => (
-                                <div key={index} className="relative pl-16 group">
-                                    <div className="absolute left-0 top-1.5 w-12 h-12 rounded-xl glass border-white/10 group-hover:border-primary/50 flex items-center justify-center transition-all bg-[#1a2f3a] z-10">
-                                        <div className="w-2 h-2 rounded-full bg-primary" />
-                                    </div>
-                                    <div className="glass-card hover:border-primary/20 bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10">
-                                        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
-                                            <span className="text-xs font-black tracking-widest text-primary uppercase bg-primary/5 px-3 py-1 rounded-full">{exp.date}</span>
-                                            <span className="text-xs text-slate-500 font-medium italic">{exp.location}</span>
-                                        </div>
-                                        <h4 className="text-xl font-bold text-white mb-1 tracking-tight">{exp.title}</h4>
-                                        <p className="text-sm font-semibold text-slate-400 mb-6">{exp.company}</p>
-                                        <ul className="space-y-3">
-                                            {exp.description.map((item, i) => (
-                                                <li key={i} className="text-slate-400 text-sm leading-relaxed flex gap-3">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-1.5 shrink-0" />
-                                                    {item}
-                                                </li>
-                                            ))}
-                                        </ul>
+
+                        <div className="flex flex-col md:flex-row gap-8 min-h-[450px]">
+                            {/* Tabs */}
+                            <div className="flex flex-row md:flex-col overflow-x-auto md:overflow-x-visible border-b md:border-b-0 md:border-l border-white/10 shrink-0">
+                                {experiences.map((exp, index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => setActiveTab(index)}
+                                        className={`
+                                            whitespace-nowrap px-6 py-4 text-[10px] font-black tracking-[0.2em] uppercase transition-all duration-300 text-left border-b-2 md:border-b-0 md:border-l-2
+                                            !bg-transparent !shadow-none !rounded-none !translate-y-0 !scale-100
+                                            ${activeTab === index
+                                                ? "text-primary border-primary"
+                                                : "text-slate-500 border-white/5 hover:text-primary hover:bg-white/5"}
+                                        `}
+                                        style={{
+                                            background: activeTab === index ? 'rgba(45, 212, 191, 0.05)' : 'transparent',
+                                            borderImage: 'none',
+                                            outline: 'none'
+                                        }}
+                                    >
+                                        {exp.company}
+                                    </button>
+                                ))}
+                            </div>
+
+                            {/* Content */}
+                            <div key={activeTab} className="flex-1 space-y-6 animate-fadeIn pl-2">
+                                <div className="space-y-2">
+                                    <h4 className="text-2xl md:text-3xl font-black text-white tracking-tight leading-tight">
+                                        {experiences[activeTab].title} <span className="text-primary italic">@ {experiences[activeTab].company}</span>
+                                    </h4>
+                                    <div className="flex flex-col gap-1">
+                                        <p className="text-xs font-black tracking-[0.2em] text-slate-500 uppercase">
+                                            {experiences[activeTab].date}
+                                        </p>
+                                        <p className="text-xs text-primary/70 font-bold tracking-widest uppercase">
+                                            {experiences[activeTab].location}
+                                        </p>
                                     </div>
                                 </div>
-                            ))}
+                                <ul className="space-y-5">
+                                    {experiences[activeTab].description.map((item, i) => (
+                                        <li key={i} className="text-slate-400 text-[15px] leading-relaxed flex gap-4 cursor-default">
+                                            <RiPlayFill className="text-primary mt-1.5 shrink-0" size={12} />
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="space-y-16">
+                    <div className="space-y-16 lg:col-span-1">
                         {/* Education */}
                         <div className="space-y-8">
                             <div className="flex items-center gap-4">

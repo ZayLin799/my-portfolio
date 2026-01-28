@@ -15,6 +15,7 @@ import Node from '../public/assets/skills/node.png';
 import Express from '../public/assets/skills/express.png';
 import AWS from '../public/assets/skills/aws.png';
 import Ubuntu from '../public/assets/skills/ubuntu.png';
+import Linux from '../public/assets/skills/linux.png';
 import Postgre from '../public/assets/skills/postgre.png';
 
 
@@ -46,6 +47,7 @@ const Skills = () => {
             { img: Java, name: 'Java' },
             { img: AWS, name: 'AWS' },
             { img: Ubuntu, name: 'Ubuntu' },
+            { img: Linux, name: 'Linux' },
             { img: Github, name: 'GitHub' },
           ].map((skill, index) => (
             <div
