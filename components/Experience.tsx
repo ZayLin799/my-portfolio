@@ -103,32 +103,31 @@ const Experience = () => {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <section id="experience" className="section-padding relative">
-            <div className="max-w-[1240px] m-auto px-6 relative z-10">
-                <div className="space-y-4 mb-16">
-                    <p className="uppercase text-sm tracking-[0.4em] text-primary font-bold">
+        <section id="experience" className="section-padding relative overflow-hidden w-full">
+            <div className="max-w-[1240px] w-full mx-auto px-6 relative z-10">
+                <div className="space-y-4 mb-12 sm:mb-16 text-center sm:text-left">
+                    <p className="uppercase text-xs sm:text-sm tracking-[0.4em] text-primary font-bold">
                         Journey
                     </p>
-                    <h2 className="leading-tight text-white">Experience & <span className="text-primary italic">Education</span></h2>
+                    <h2 className="leading-tight text-white text-3xl sm:text-4xl md:text-5xl">Experience & <span className="text-primary italic">Education</span></h2>
                 </div>
 
-                <div className="grid lg:grid-cols-3 gap-16">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 sm:gap-16">
                     {/* Experience Section */}
                     <div className="lg:col-span-2 space-y-12">
                         <div className="space-y-2">
-                            <p className="uppercase text-sm tracking-[0.4em] text-primary font-bold">Where I've worked</p>
-                            <h3 className="text-3xl md:text-4xl font-black tracking-tight text-white mb-8">Professional <span className="text-primary italic">Exp</span></h3>
+                            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-white mb-6 md:mb-8">Professional <span className="text-primary italic">Exp</span></h3>
                         </div>
 
-                        <div className="flex flex-col md:flex-row gap-8 min-h-[450px]">
-                            {/* Tabs */}
-                            <div className="flex flex-row md:flex-col overflow-x-auto md:overflow-x-visible border-b md:border-b-0 md:border-l border-white/10 shrink-0">
+                        <div className="flex flex-col md:flex-row gap-8 min-h-[auto] md:min-h-[450px]">
+                            {/* Tabs container with improved touch area and scrollbar */}
+                            <div className="flex flex-row md:flex-col overflow-x-auto md:overflow-x-visible border-b md:border-b-0 md:border-l border-white/10 shrink-0 mb-6 md:mb-0 pb-4 md:pb-0 scrollbar-thin scrollbar-track-white/5 scrollbar-thumb-primary/30">
                                 {experiences.map((exp, index) => (
                                     <button
                                         key={index}
                                         onClick={() => setActiveTab(index)}
                                         className={`
-                                            whitespace-nowrap px-6 py-4 text-[10px] font-black tracking-[0.2em] uppercase transition-all duration-300 text-left border-b-2 md:border-b-0 md:border-l-2
+                                            whitespace-nowrap px-4 sm:px-6 py-3 sm:py-4 text-[10px] sm:text-[11px] font-black tracking-[0.1em] sm:tracking-[0.2em] uppercase transition-all duration-300 text-left border-b-2 md:border-b-0 md:border-l-2
                                             !bg-transparent !shadow-none !rounded-none !translate-y-0 !scale-100
                                             ${activeTab === index
                                                 ? "text-primary border-primary"
@@ -148,8 +147,8 @@ const Experience = () => {
                             {/* Content */}
                             <div key={activeTab} className="flex-1 space-y-6 animate-fadeIn pl-2">
                                 <div className="space-y-2">
-                                    <h4 className="text-2xl md:text-3xl font-black text-white tracking-tight leading-tight">
-                                        {experiences[activeTab].title} <span className="text-primary italic">@ {experiences[activeTab].company}</span>
+                                    <h4 className="text-xl sm:text-2xl md:text-3xl font-black text-white tracking-tight leading-tight">
+                                        {experiences[activeTab].title} <span className="block sm:inline text-primary italic sm:before:content-['@_']">@ {experiences[activeTab].company}</span>
                                     </h4>
                                     <div className="flex flex-col gap-1">
                                         <p className="text-xs font-black tracking-[0.2em] text-slate-500 uppercase">
@@ -160,10 +159,10 @@ const Experience = () => {
                                         </p>
                                     </div>
                                 </div>
-                                <ul className="space-y-5">
+                                <ul className="space-y-4 sm:space-y-5">
                                     {experiences[activeTab].description.map((item, i) => (
-                                        <li key={i} className="text-slate-400 text-[15px] leading-relaxed flex gap-4 cursor-default">
-                                            <RiPlayFill className="text-primary mt-1.5 shrink-0" size={12} />
+                                        <li key={i} className="text-slate-400 text-sm sm:text-[15px] leading-relaxed flex gap-3 sm:gap-4 cursor-default">
+                                            <RiPlayFill className="text-primary mt-1.5 shrink-0" size={10} />
                                             <span>{item}</span>
                                         </li>
                                     ))}
@@ -183,10 +182,10 @@ const Experience = () => {
                             </div>
                             <div className="space-y-6">
                                 {education.map((edu, index) => (
-                                    <div key={index} className="glass-card bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10">
-                                        <span className="text-xs font-black tracking-widest text-primary uppercase">{edu.date}</span>
-                                        <h4 className="text-lg font-bold text-white mt-2 tracking-tight">{edu.degree}</h4>
-                                        <p className="text-sm text-slate-400 font-medium italic">{edu.school}</p>
+                                    <div key={index} className="glass-card">
+                                        <span className="text-[10px] sm:text-xs font-black tracking-widest text-primary uppercase">{edu.date}</span>
+                                        <h4 className="text-md sm:text-lg font-bold text-white mt-1 sm:mt-2 tracking-tight">{edu.degree}</h4>
+                                        <p className="text-xs sm:text-sm text-slate-400 font-medium italic">{edu.school}</p>
                                     </div>
                                 ))}
                             </div>
@@ -200,14 +199,14 @@ const Experience = () => {
                                 </div>
                                 <h3 className="text-2xl font-bold tracking-tight text-white">Certifications</h3>
                             </div>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                                 {certificates.map((cert, index) => (
-                                    <div key={index} className="glass-card bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-colors">
+                                    <div key={index} className="glass-card flex flex-col justify-between hover:bg-white/10 transition-colors">
                                         <div>
-                                            <span className="text-xs font-black tracking-widest text-primary uppercase">{cert.date}</span>
-                                            <h4 className="text-md font-bold text-white mt-2 leading-snug">{cert.title}</h4>
+                                            <span className="text-[10px] sm:text-xs font-black tracking-widest text-primary uppercase">{cert.date}</span>
+                                            <h4 className="text-sm sm:text-md font-bold text-white mt-1 sm:mt-2 leading-snug">{cert.title}</h4>
                                         </div>
-                                        <p className="text-xs text-slate-500 mt-4 font-medium italic">{cert.issuer}</p>
+                                        <p className="text-[10px] sm:text-xs text-slate-500 mt-3 sm:mt-4 font-medium italic">{cert.issuer}</p>
                                     </div>
                                 ))}
                             </div>

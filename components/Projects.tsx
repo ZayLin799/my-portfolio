@@ -12,8 +12,8 @@ import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
   return (
-    <section id="projects" className="section-padding relative">
-      <div className="max-w-[1240px] mx-auto px-6 relative z-10 w-full">
+    <section id="projects" className="section-padding relative overflow-hidden">
+      <div className="max-w-[1240px] w-full mx-auto px-6 relative z-10 text-center sm:text-left">
         <div className="space-y-4 mb-16">
           <p className="uppercase text-sm tracking-[0.4em] text-primary font-bold">
             Portfolio

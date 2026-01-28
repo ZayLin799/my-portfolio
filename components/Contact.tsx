@@ -54,8 +54,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding relative">
-      <div className="max-w-[1240px] m-auto px-6 relative z-10 w-full">
+    <section id="contact" className="section-padding relative overflow-hidden">
+      <div className="max-w-[1240px] w-full mx-auto px-6 relative z-10 text-center sm:text-left">
         <div className="space-y-4 mb-16">
           <p className="uppercase text-sm tracking-[0.4em] text-primary font-bold">
             Contact
@@ -65,7 +65,7 @@ const Contact = () => {
 
         <div className="grid gap-12 lg:grid-cols-5">
           {/* left */}
-          <div className="w-full h-full col-span-3 lg:col-span-2">
+          <div className="w-full h-full col-span-1 lg:col-span-2">
             <div className="glass-card h-full flex flex-col justify-between">
               <div className="space-y-8">
                 <div className="relative group overflow-hidden rounded-xl">
@@ -128,7 +128,7 @@ const Contact = () => {
           </div>
 
           {/* right */}
-          <div className="w-full h-auto col-span-3">
+          <div className="w-full h-auto col-span-1 lg:col-span-3">
             <div className="glass-card bg-white/[0.03]">
               <form onSubmit={onSubmit} className="space-y-6">
                 <div className="grid w-full gap-6 md:grid-cols-2">

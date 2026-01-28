@@ -18,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/fav.png" />
       </Head>
 
-      <main>
+      <main className="overflow-x-hidden">
         <Main />
         <About />
         <Skills />

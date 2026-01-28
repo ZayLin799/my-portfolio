@@ -11,8 +11,8 @@ const About = () => {
 
   return (
     <section id="about" className="section-padding relative">
-      <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-16 px-6 relative z-10">
-        <div className="col-span-2 space-y-8">
+      <div className="max-w-[1240px] w-full m-auto md:grid grid-cols-3 gap-16 px-6 relative z-10">
+        <div className="col-span-1 md:col-span-2 space-y-8">
           <div className="space-y-2">
             <p className="uppercase text-sm tracking-[0.4em] text-primary font-bold">
               About Me

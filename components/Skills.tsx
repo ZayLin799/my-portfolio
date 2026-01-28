@@ -22,7 +22,7 @@ import Postgre from '../public/assets/skills/postgre.png';
 const Skills = () => {
   return (
     <section id='skills' className='section-padding min-h-screen relative'>
-      <div className='max-w-[1240px] mx-auto px-6 h-full flex flex-col justify-center gap-12 relative z-10'>
+      <div className='max-w-[1240px] w-full mx-auto px-6 h-full flex flex-col justify-center gap-12 relative z-10'>
         <div className='space-y-4'>
           <p className='uppercase text-sm tracking-[0.4em] text-primary font-bold'>
             Technical Stack

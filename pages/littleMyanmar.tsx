@@ -18,13 +18,13 @@ const property = () => {
           priority
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-6">
-          <h2 className="py-2 text-5xl md:text-6xl font-black tracking-tight">Little Myanmar</h2>
+          <h2 className="py-2 text-4xl sm:text-5xl md:text-6xl font-black tracking-tight">Little Myanmar</h2>
           <h3 className="text-primary font-bold tracking-widest uppercase text-sm">Laravel / PHP / Stripe</h3>
         </div>
       </div>
 
       <div className="max-w-[1240px] mx-auto p-6 grid md:grid-cols-5 gap-12 py-16">
-        <div className="col-span-4 space-y-6">
+        <div className="col-span-1 md:col-span-4 space-y-6">
           <div className="space-y-2">
             <p className="uppercase text-sm tracking-[0.4em] text-primary font-bold">Project</p>
             <h2 className="text-3xl font-bold text-white">Overview</h2>
@@ -46,7 +46,7 @@ const property = () => {
           </div>
         </div>
 
-        <div className="col-span-4 md:col-span-1">
+        <div className="col-span-1 md:col-span-1">
           <div className="glass-card bg-white/[0.03] space-y-6">
             <p className="text-xs font-black tracking-[0.2em] text-slate-500 uppercase">Technologies</p>
             <div className="grid grid-cols-2 md:grid-cols-1 gap-4">
@@ -64,7 +64,7 @@ const property = () => {
           </div>
         </div>
 
-        <div className="col-span-4">
+        <div className="col-span-1 md:col-span-4">
           <Link href="/#projects">
             <span className="group flex items-center gap-2 text-slate-500 hover:text-primary transition-colors cursor-pointer font-bold">
               <div className="w-8 h-[1px] bg-slate-700 group-hover:bg-primary transition-all" />
