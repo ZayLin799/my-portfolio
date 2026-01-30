@@ -17,7 +17,7 @@ const About = () => {
             <p className="uppercase text-sm tracking-[0.4em] text-primary font-bold">
               About Me
             </p>
-            <h2 className="leading-tight">Engineering Digital <span className="text-primary italic">Excellence</span></h2>
+            <h2 className="leading-tight">Architecting <span className="text-primary italic">Resilient Digital Solutions</span></h2>
           </div>
 
           <div className="glass-card leading-relaxed text-slate-400 space-y-4">
