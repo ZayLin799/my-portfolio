@@ -24,7 +24,7 @@ const Main = () => {
               Hi, I&#39;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Zay Lin Htet</span>
             </h1>
             <h2 className="text-slate-400 font-medium tracking-tight">
-              A <span className="text-white italic">Full Stack</span> Software Developer
+              A <span className="text-white italic">Full-stack</span> Software Developer
             </h2>
           </div>
 

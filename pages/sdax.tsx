@@ -4,7 +4,7 @@ import Sdax from '../public/assets/projects/sdax.png';
 import { RiRadioButtonFill } from 'react-icons/ri';
 import Link from 'next/link';
 
-const netflix = () => {
+const sdax = () => {
   return (
     <div className='w-full'>
       <div className='w-screen h-[50vh] relative'>
@@ -19,7 +19,7 @@ const netflix = () => {
         />
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-6'>
           <h2 className='py-2 text-4xl sm:text-5xl md:text-6xl font-black tracking-tight'>SDAX</h2>
-          <h3 className='text-primary font-bold tracking-widest uppercase text-sm'>React JS / Java / Spring WebFlux</h3>
+          <h3 className='text-primary font-bold tracking-widest uppercase text-sm'>Express.js / Next.js / Java Spring WebFlux</h3>
         </div>
       </div>
 
@@ -31,10 +31,11 @@ const netflix = () => {
           </div>
           <p className='text-lg text-slate-400 leading-relaxed max-w-3xl'>
             SDAX is Singapore’s leading Digital Assets Exchange. During my tenure,
+            I contributed the transition of the SDAX investment platform from <strong>Java Spring WebFlux to Express.js and Next.js</strong>.
             I was responsible for maintaining the admin dashboard, user platform,
-            and mission-critical microservices. My work involved rapid adoption of Java Spring WebFlux,
+            and mission-critical microservices. My work involved rapid adoption of modern stacks,
             managing multiple microservice repositories, and integrating cutting-edge technologies
-            like Blockchain/Web3, Keycloak, and Datadog for institutional-grade reliability.
+            like <strong>Datadog</strong> for real-time monitoring and proactive error tracking to ensure 24/7 system availability.
           </p>
           <div className="pt-4">
             <a
@@ -52,11 +53,11 @@ const netflix = () => {
             <p className='text-xs font-black tracking-[0.2em] text-slate-500 uppercase'>Technologies</p>
             <div className='grid grid-cols-2 md:grid-cols-1 gap-4'>
               {[
-                "React",
+                "Next.js",
+                "Express.js",
                 "TypeScript",
                 "Java Spring",
-                "Microservices",
-                "Blockchain",
+                "Datadog",
                 "Docker"
               ].map((tech, idx) => (
                 <p key={idx} className="flex items-center gap-3 text-slate-300 text-sm font-medium">
@@ -80,4 +81,4 @@ const netflix = () => {
   );
 };
 
-export default netflix;
+export default sdax;

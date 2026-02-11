@@ -79,7 +79,7 @@ const Contact = () => {
 
                 <div className="space-y-4">
                   <h2 className="text-3xl font-bold tracking-tight">Zay Lin Htet</h2>
-                  <p className="text-primary font-medium tracking-wide uppercase text-xs">Full Stack Software Developer</p>
+                  <p className="text-primary font-medium tracking-wide uppercase text-xs">Full-Stack Software Developer</p>
                   <p className="text-slate-400 leading-relaxed pt-2">
                     I am available for freelance or full-time positions. Let&#39;s collaborate on something extraordinary.
                   </p>

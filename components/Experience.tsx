@@ -7,13 +7,12 @@ const Experience = () => {
         {
             date: "02/2025 – present",
             location: "Remote",
-            title: "Full Stack Developer (Fulltime)",
+            title: "Full-stack Developer (Fulltime)",
             company: "XynoTech",
             description: [
-                "Developed a Learning Management System (LMS) with Laravel, improving course management and user engagement",
-                "Built an e-commerce platform with Laravel, delivering a seamless shopping experience and boosting conversions",
-                "Created a Tele-Doctor platform using Express.js and Next.js, enabling smooth virtual consultations and enhancing user retention",
-                "Developed a Movie Streaming Platform with NestJS, Next.js, and R2 Cloud Storage, ensuring secure, high-speed video streaming with a modern UI",
+                "<strong>Streaming Architecture</strong>: Deployed a high-speed <strong>Movie Streaming Platform</strong> using <strong>NestJS, Next.js, and R2 Cloud Storage</strong> to optimize delivery and storage costs.",
+                "<strong>Platform Development</strong>: Built an <strong>LMS and E-commerce platform</strong> with <strong>Laravel</strong>, improving system efficiency and user transaction rates.",
+                "<strong>HealthTech</strong>: Engineered a <strong>Tele-Doctor platform</strong> with <strong>Express.js and Next.js</strong>, enabling real-time consultations and high user retention.",
             ],
         },
         {
@@ -22,9 +21,9 @@ const Experience = () => {
             title: "Full-stack Software Developer (Fulltime)",
             company: "VIABELLS PTE. LTD",
             description: [
-                "Developed a custom WordPress website for AM-Skincare with tailored themes and plugins — am-skincare.com",
-                "Built a modern portfolio site for Viabells using React and Next.js — viabells.com",
-                "Maintained and migrated the SDAX investment platform from Java Spring WebFlux to Express.js and Next.js, integrating Datadog for monitoring — sdax.co",
+                "<strong>System Migration</strong>: Contributed the transition of the <strong>SDAX investment platform</strong> from <strong>Java Spring WebFlux to Express.js/Next.js</strong>.",
+                "<strong>Reliability</strong>: Integrated <strong>Datadog</strong> for real-time monitoring and proactive error tracking to ensure 24/7 system availability.",
+                "<strong>Custom Solutions</strong>: Developed a high-performance portfolio for <strong>Viabells</strong> and a custom <strong>WordPress/PHP</strong> ecosystem for <strong>A.M Skincare</strong>.",
             ],
         },
         {
@@ -33,11 +32,10 @@ const Experience = () => {
             title: "Software Developer (Fulltime)",
             company: "AGGA.IO Co., Ltd",
             description: [
-                "Developed a Clinic Management System for Pyit Tine Htaung Clinic with Laravel, MySQL, and Cordova, enhancing core features and enabling mobile access.",
-                "Built a Lab Management System for the same clinic using Laravel APIs and Vue.js frontend for efficient test tracking and reporting.",
-                "Enhanced an ISP Billing System (IQnet) with new features and offline mobile support using Laravel, MySQL, and Cordova.",
-                "Created a Data Collection System for the Ministry of Union Government using Laravel, React Native, and MySQL, enabling both web and mobile data entry.",
-                "Developed a Disabilities Information System (web + mobile) using Laravel, React Native, and MySQL, improving accessibility and centralized data management.",
+                "<strong>Data Collection System</strong>: Built a high-security data collection platform for the <strong>Ministry of Union Government</strong> using <strong>Laravel and React Native</strong>, enabling synchronized web and mobile data entry.",
+                "<strong>Disabilities Information System</strong>: Developed a centralized web and mobile management system to improve accessibility and data accuracy for national disability records.",
+                "<strong>Healthcare Solutions</strong>: Engineered <strong>Clinic and Lab Management Systems</strong> using <strong>Laravel and Vue.js</strong>, streamlining patient tracking and diagnostic reporting for medical facilities.",
+                "<strong>Telecom Infrastructure</strong>: Optimized the <strong>IQnet ISP Billing System</strong> by implementing new features and offline mobile support via <strong>Cordova</strong> to ensure service continuity.",
             ],
         },
         {
@@ -46,7 +44,7 @@ const Experience = () => {
             title: "Backend Developer (Volunteer)",
             company: "HeinLearn",
             description: [
-                "Developed a School Management System as a Backend Developer using Laravel, PHP, and MySQL, delivering a robust, scalable platform with a responsive HTML5/CSS/Bootstrap interface.",
+                "<strong>Educational Infrastructure</strong>: Designed a <strong>School Management System</strong> backend using <strong>Laravel and PHP</strong>, delivering a scalable platform with a responsive <strong>Bootstrap</strong> interface.",
             ],
         },
         {
@@ -55,7 +53,7 @@ const Experience = () => {
             title: "Full-Stack Junior Developer (OJT)",
             company: "Marvellous Software Solution",
             description: [
-                "Developed scalable web applications, collaborating closely with cross-functional teams.",
+                "<strong>Collaborative Development</strong>: Contributed to the development of scalable web applications while collaborating closely with cross-functional teams to meet project milestones.",
             ],
         },
         {
@@ -64,7 +62,8 @@ const Experience = () => {
             title: "WordPress Developer (Intern)",
             company: "I-See Media",
             description: [
-                "Created powerful Content Management Systems to serve as interface for client.",
+                "<strong>Custom CMS Development</strong>: Architected and customized <strong>Content Management Systems</strong> for diverse clients, focusing on intuitive interfaces that allowed non-technical users to manage digital content efficiently.",
+                "<strong>Front-End Integration</strong>: Translated client requirements into functional web interfaces, ensuring cross-browser compatibility and responsive performance for early-stage digital projects.",
             ],
         },
     ];
@@ -116,7 +115,7 @@ const Experience = () => {
                     {/* Experience Section */}
                     <div className="lg:col-span-2 space-y-12">
                         <div className="space-y-2">
-                            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-white mb-6 md:mb-8">Professional <span className="text-primary italic">Exp</span></h3>
+                            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-white mb-6 md:mb-8">Professional <span className="text-primary italic">Experience</span></h3>
                         </div>
 
                         <div className="flex flex-col md:flex-row gap-8 min-h-[auto] md:min-h-[450px]">
@@ -163,7 +162,7 @@ const Experience = () => {
                                     {experiences[activeTab].description.map((item, i) => (
                                         <li key={i} className="text-slate-400 text-sm sm:text-[15px] leading-relaxed flex gap-3 sm:gap-4 cursor-default">
                                             <RiPlayFill className="text-primary mt-1.5 shrink-0" size={10} />
-                                            <span>{item}</span>
+                                            <span dangerouslySetInnerHTML={{ __html: item }} />
                                         </li>
                                     ))}
                                 </ul>

@@ -67,7 +67,7 @@ const Projects = () => {
                 title="Sdax"
                 backgroundImg={Sdax}
                 projectUrl="/sdax"
-                tech="React / Java (Spring WebFlux)"
+                tech="Express.js / Next.js / Java Spring"
               />
               <ProjectItem
                 title="Viabells"
