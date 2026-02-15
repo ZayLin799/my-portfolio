@@ -22,19 +22,22 @@ const About = () => {
 
           <div className="glass-card leading-relaxed text-slate-400 space-y-4">
             <p>
-              I am a <span className="text-white font-semibold">Results-driven Full-Stack Software Developer</span> with over{" "}
+              I am a <span className="text-white font-semibold">Senior Full-Stack Software Developer</span> with over{" "}
               <span className="text-white font-semibold">{yearsOfExperience}+ years</span> of experience
-              architecting and deploying scalable, mission-critical web and mobile systems.
+              designing and deploying high-availability, mission-critical systems for web and mobile.
             </p>
             <p>
-              My expertise lies in engineering secure, high-performance backend architectures using <span className="text-primary font-medium">Node.js, NestJS, and Laravel</span>,
-              paired with seamless, modern frontend experiences built in <span className="text-primary font-medium">Next.js and React</span>.
+              I specialize in architecting secure, distributed backend systems using <span className="text-primary font-medium">Node.js, Nest.js and Laravel</span>,
+              complemented by high-performance, user-centric interfaces built with <span className="text-primary font-medium">Next.js and React</span>.
             </p>
             <p>
-              I specialize in <span className="text-white font-medium">modernizing legacy infrastructures</span> and integrating advanced cloud ecosystems like <span className="text-primary font-medium">R2 and Datadog</span> to drive system observability and efficiency.
+              My expertise centers on <span className="text-white font-medium">legacy system modernization</span> and
+              optimizing cloud-native infrastructures to improve system observability, resilience, and operational efficiency.
             </p>
             <p>
-              From delivering national-level government platforms to fintech migrations, I am committed to writing <span className="text-white font-medium">clean, maintainable code</span> that ensures long-term reliability and business scalability.
+              With a track record ranging from national government platforms to complex fintech migrations, I prioritize
+              <span className="text-white font-medium"> clean architecture and scalable design</span> to ensure
+              long-term maintainability and business growth.
             </p>
           </div>
         </div>
