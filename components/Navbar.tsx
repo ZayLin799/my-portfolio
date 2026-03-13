@@ -1,169 +1,108 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
-// import { useRouter } from 'next/router';
-// import NavLogo from '../public/assets/navLogo.png'
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+
+import { personalProfile } from "../data/portfolio";
+
+const navItems = [
+  { label: "About", href: "/#about" },
+  { label: "Capabilities", href: "/#skills" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Contact", href: "/#contact" },
+];
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
-  const [shadow, setShadow] = useState(false);
-  const [navBg, setNavBg] = useState('#1a2f3a');
-  const [linkColor, setLinkColor] = useState('#f8fafc');
-  // const [position, setPosition] = useState('fixed')
-  // const router = useRouter();
-
-  // useEffect(() => {
-  //   if (
-  //     router.asPath === '/property' ||
-  //     router.asPath === '/crypto' ||
-  //     router.asPath === '/netflix' ||
-  //     router.asPath === '/twitch'
-  //   ) {
-  //     setNavBg('transparent');
-  //     setLinkColor('#ecf0f3');
-  //   } else {
-  //     setNavBg('#ecf0f3');
-  //     setLinkColor('#1f2937');
-  //   }
-  // }, [router]);
-
-  const handleNav = () => {
-    setNav(!nav);
-  };
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleShadow = () => {
-      if (window.scrollY >= 90) {
-        setShadow(true);
-      } else {
-        setShadow(false);
-      }
-    };
-    window.addEventListener('scroll', handleShadow);
-    return () => window.removeEventListener('scroll', handleShadow);
+    const onScroll = () => setIsScrolled(window.scrollY > 24);
+
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
-    if (nav) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    document.body.style.overflow = menuOpen ? "hidden" : "auto";
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     };
-  }, [nav]);
+  }, [menuOpen]);
 
   return (
     <>
-      <header
-        className={`fixed w-full h-24 z-[100] transition-all duration-500 ${shadow ? 'glass h-20 shadow-primary/10' : ''
-          }`}
-      >
-        <nav className='flex justify-between items-center w-full h-full px-6 2xl:px-24 max-w-[1920px] mx-auto'>
-          <Link href='/'>
-            <div className='group flex items-center gap-2 cursor-pointer'>
-              <div className='w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-black text-xl shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform'>
-                Z
-              </div>
-              <span className='text-white font-bold text-xl tracking-tight hidden sm:block'>Zay <span className='text-primary'>Lin</span></span>
-            </div>
+      <header className={`site-header ${isScrolled ? "site-header-scrolled" : ""}`}>
+        <nav className="site-nav">
+          <Link href="/#home" className="brand-mark">
+            <span className="brand-icon">ZL</span>
+            <span className="brand-copy">
+              <strong>Zay Lin Htet</strong>
+              <small>Full-stack software developer</small>
+            </span>
           </Link>
-          <div className='flex items-center gap-8'>
-            <ul className='hidden md:flex items-center gap-10 font-medium tracking-wide'>
-              <li className='nav-link'><Link href='/'>Home</Link></li>
-              <li className='nav-link'><Link href='/#about'>About</Link></li>
-              <li className='nav-link'><Link href='/#skills'>Skills</Link></li>
-              <li className='nav-link'><Link href='/#experience'>Experience</Link></li>
-              <li className='nav-link'><Link href='/#projects'>Projects</Link></li>
-              <li className='nav-link'><Link href='/#contact'>Contact</Link></li>
-            </ul>
-            {/* Hamburger Icon */}
-            <button
-              onClick={handleNav}
-              className='md:hidden p-3 bg-white/5 border border-white/10 rounded-xl text-primary flex items-center justify-center'
-            >
-              <AiOutlineMenu size={20} />
-            </button>
+
+          <div className="desktop-nav">
+            <div className="nav-links">
+              {navItems.map((item) => (
+                <Link key={item.href} href={item.href} className="nav-link">
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+            <a href={personalProfile.resumeUrl} className="button-secondary">
+              Resume
+            </a>
           </div>
+
+          <button
+            type="button"
+            className="menu-toggle"
+            onClick={() => setMenuOpen(true)}
+            aria-label="Open navigation"
+          >
+            <AiOutlineMenu size={18} />
+          </button>
         </nav>
       </header>
 
       <div
-        onClick={() => setNav(false)}
-        className={
-          nav
-            ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 backdrop-blur-md z-[200] transition-all duration-500 opacity-100 visible'
-            : 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/0 backdrop-blur-none z-[-1] transition-all duration-500 opacity-0 invisible'
-        }
+        className={`mobile-overlay ${menuOpen ? "mobile-overlay-visible" : ""}`}
+        onClick={() => setMenuOpen(false)}
       />
-      <div
-        className={
-          nav
-            ? ' fixed left-0 top-0 w-[80%] sm:w-[60%] md:w-[45%] h-screen glass border-r border-white/10 p-6 sm:p-10 ease-in-out duration-500 z-[201] flex flex-col overflow-y-auto no-scrollbar shadow-2xl'
-            : 'fixed left-[-100%] top-0 p-10 ease-in-out duration-500 invisible h-screen'
-        }
-      >
-        {/* Top Section: Logo & Tagline */}
-        <div className='shrink-0'>
-          <div className='flex w-full items-center justify-between'>
-            <div className='w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-black text-lg sm:text-xl shadow-lg shadow-primary/20'>
-              Z
-            </div>
+
+      <aside className={`mobile-drawer ${menuOpen ? "mobile-drawer-open" : ""}`}>
+        <div className="mobile-drawer-inner">
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
+            <p className="eyebrow" style={{ margin: 0 }}>Navigation</p>
             <button
-              onClick={handleNav}
-              className='rounded-xl glass p-3 text-primary hover:scale-110 duration-300'
+              type="button"
+              className="menu-toggle"
+              style={{ display: "flex" }}
+              onClick={() => setMenuOpen(false)}
+              aria-label="Close navigation"
             >
               <AiOutlineClose size={18} />
             </button>
           </div>
-          <div className='border-b border-white/10 my-4 sm:my-6'>
-            <p className='w-[85%] md:w-[90%] py-2 sm:py-4 text-slate-300 font-medium text-sm sm:text-md'>
-              Let&#39;s build something legendary together
-            </p>
-          </div>
-        </div>
-
-        {/* Middle Section: Links */}
-        <div className='flex-grow py-4'>
-          <ul className='flex flex-col gap-2 sm:gap-4 uppercase font-semibold tracking-widest'>
-            {['Home', 'About', 'Skills', 'Experience', 'Projects', 'Contact'].map((item) => (
-              <Link key={item} href={item === 'Home' ? '/' : `/#${item.toLowerCase()}`}>
-                <li onClick={() => setNav(false)} className='py-3 sm:py-4 text-sm hover:text-primary transition-colors'>
-                  {item}
-                </li>
+          <div className="mobile-link-list">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="mobile-link"
+                onClick={() => setMenuOpen(false)}
+              >
+                {item.label}
               </Link>
             ))}
-          </ul>
-        </div>
-
-        {/* Bottom Section: Socials */}
-        <div className='shrink-0 pt-10 pb-4'>
-          <p className='uppercase tracking-[0.2em] text-primary font-bold text-xs'>
-            Let&#39;s Connect
-          </p>
-          <div className='flex items-center justify-start gap-4 sm:gap-6 my-4 w-full'>
-            <a href='https://www.linkedin.com/in/zay-lin-htet/' target='_blank' rel='noreferrer' className='hover:scale-110 duration-300'>
-              <div className='glass p-3 rounded-xl text-primary'>
-                <FaLinkedinIn size={18} />
-              </div>
-            </a>
-            <a href='https://github.com/ZayLin799' target='_blank' rel='noreferrer' className='hover:scale-110 duration-300'>
-              <div className='glass p-3 rounded-xl text-primary'>
-                <FaGithub size={18} />
-              </div>
-            </a>
-            <Link href='/#contact'>
-              <div onClick={() => setNav(false)} className='glass p-3 rounded-xl text-primary hover:scale-110 duration-300 cursor-pointer'>
-                <AiOutlineMail size={18} />
-              </div>
-            </Link>
           </div>
+          <a href={personalProfile.resumeUrl} className="button-primary">
+            Download resume
+          </a>
         </div>
-      </div>
+      </aside>
     </>
   );
 };
