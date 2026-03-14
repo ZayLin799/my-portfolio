@@ -39,7 +39,7 @@ const Navbar = () => {
             <span className="brand-icon">ZL</span>
             <span className="brand-copy">
               <strong>Zay Lin Htet</strong>
-              <small>Full-stack software developer</small>
+              <small>{personalProfile.title}</small>
             </span>
           </Link>
 

@@ -1003,10 +1003,6 @@ textarea {
     padding: 0.75rem 0;
   }
 
-  .brand-copy small {
-    display: none;
-  }
-
   .stat-card {
     min-height: auto;
   }
