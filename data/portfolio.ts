@@ -60,7 +60,7 @@ export const personalProfile = {
   nationality: "Myanmar",
   website: "https://www.zaylinhtet.online/",
   resumeUrl: "/Zay-Lin-Htet-CV.pdf",
-  linkedinUrl: "https://www.linkedin.com/in/zay-lin-htet/",
+  linkedinUrl: "https://www.linkedin.com/in/zay-lin-htet2001",
   githubUrl: "https://github.com/ZayLin799",
   heroEyebrow: "Available for full-time opportunities",
   heroTitle:
