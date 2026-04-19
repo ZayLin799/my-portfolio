@@ -101,10 +101,7 @@ const Contact = () => {
               <AiOutlinePhone size={18} />
               <span>{personalProfile.phone}</span>
             </div>
-            <div className="contact-row">
-              <HiOutlineLocationMarker size={18} />
-              <span>{personalProfile.location}</span>
-            </div>
+
           </div>
 
           <div className="contact-links" style={{ marginTop: "2rem", paddingTop: "1.5rem", borderTop: "1px solid rgba(22, 33, 27, 0.08)" }}>

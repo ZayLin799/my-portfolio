@@ -65,10 +65,7 @@ const About = () => {
             <p>{personalProfile.title}</p>
           </div>
           <div className="snapshot-list">
-            <div className="snapshot-row">
-              <span>Current base</span>
-              <strong>Thailand (open to work anywhere)</strong>
-            </div>
+
             <div className="snapshot-row">
               <span>Preferred work</span>
               <strong>All full-time roles</strong>
