@@ -50,7 +50,10 @@ const Main = () => {
           </div>
 
           <div className="snapshot-list">
-
+            <div className="snapshot-row">
+              <span>Work preference</span>
+              <strong>{personalProfile.location}</strong>
+            </div>
             <div className="snapshot-row">
               <span>Primary stack</span>
               <strong>Node.js, NestJS, Laravel, Next.js</strong>

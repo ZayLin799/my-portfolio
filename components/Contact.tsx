@@ -89,7 +89,8 @@ const Contact = () => {
           <p className="body-copy">
             If you are hiring for a full-stack engineer who can contribute across
             product, backend, frontend, and infrastructure, send me a note. I am
-            especially interested in remote roles with strong ownership.
+            especially interested in remote, hybrid, or onsite roles with strong
+            ownership.
           </p>
 
           <div className="contact-details">

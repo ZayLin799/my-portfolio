@@ -65,7 +65,10 @@ const About = () => {
             <p>{personalProfile.title}</p>
           </div>
           <div className="snapshot-list">
-
+            <div className="snapshot-row">
+              <span>Work preference</span>
+              <strong>{personalProfile.location}</strong>
+            </div>
             <div className="snapshot-row">
               <span>Preferred work</span>
               <strong>All full-time roles</strong>
