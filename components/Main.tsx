@@ -60,7 +60,7 @@ const Main = () => {
             </div>
             <div className="snapshot-row">
               <span>Best fit</span>
-              <strong>Product teams that need ownership across the stack</strong>
+              <strong>Teams that need secure backend, frontend, and cloud delivery</strong>
             </div>
           </div>
 

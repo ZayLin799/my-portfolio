@@ -53,57 +53,57 @@ export interface ProjectCaseStudy {
 
 export const personalProfile = {
   name: "Zay Lin Htet",
-  title: "Full-stack software developer",
+  title: "Senior Full-Stack Software Developer",
   email: "zaylin13.dev@gmail.com",
-  phone: "+959 795927748 / +66 889131528",
-  location: "Open to Remote, Hybrid, or Onsite roles",
+  phone: "+66 889131528",
+  location: "Thailand / Remote",
   nationality: "Myanmar",
   website: "https://www.zaylinhtet.online/",
   resumeUrl: "/Zay-Lin-Htet-CV.pdf",
   linkedinUrl: "https://www.linkedin.com/in/zay-lin-htet",
   githubUrl: "https://github.com/ZayLin799",
-  heroEyebrow: "Available for full-time opportunities",
+  heroEyebrow: "Senior full-stack developer based in Thailand",
   heroTitle:
-    "I build reliable products across fintech, govtech, healthtech, and commerce.",
+    "I design, modernize, and ship secure web and mobile platforms.",
   heroSummary:
-    "5+ years shipping production systems with Node.js, NestJS, Laravel, Next.js, AWS, and observability tooling. I work comfortably across architecture, APIs, frontend delivery, and day-two operations.",
+    "5+ years building high-availability systems with Node.js, NestJS, Laravel, Next.js, React, cloud infrastructure, payments, monitoring, and production support.",
   aboutSummary:
-    "I am strongest in roles where a team needs both execution and ownership: modernizing legacy systems, shipping features against real deadlines, and keeping product quality high while infrastructure scales.",
+    "I specialize in secure distributed backends, fast user-centric frontends, and practical architecture for products that need to scale without becoming hard to operate.",
   aboutImage: AboutImage,
 };
 
 export const recruiterStats: RecruiterStat[] = [
-  { value: "5+ years", label: "Professional software delivery" },
-  { value: "6 teams", label: "Full-time, contract, and volunteer roles" },
-  { value: "4 sectors", label: "Fintech, govtech, healthtech, commerce" },
-  { value: "7 case studies", label: "Live portfolio examples in this site" },
+  { value: "5+ years", label: "Full-stack software delivery" },
+  { value: "7 roles", label: "Full-time, contract, volunteer, and intern work" },
+  { value: "6 sectors", label: "Automotive, fintech, govtech, healthtech, education, media" },
+  { value: "7 projects", label: "Production examples across this portfolio" },
 ];
 
 export const recruiterSignals = [
-  "Strong in full-stack product delivery, not only frontend polish",
-  "Comfortable owning APIs, databases, cloud infrastructure, and monitoring",
-  "Experienced with legacy modernization and cross-team collaboration",
+  "Built Laravel, NestJS, Express.js, Next.js, and React systems in production",
+  "Handled payment flows, OTP auth, report generation, monitoring, and deployment",
+  "Experienced with legacy modernization, dashboards, mobile support, and cloud storage",
 ];
 
 export const capabilityGroups: CapabilityGroup[] = [
   {
-    title: "Backend and platform delivery",
+    title: "Backend and secure platform delivery",
     summary:
-      "Designing APIs, authentication flows, payment integrations, and maintainable service layers for production systems.",
+      "Designing APIs, authentication flows, payment integrations, report generation, and maintainable service layers for production systems.",
     items: [
       "Node.js, NestJS, Express.js, Laravel, PHP",
-      "REST APIs, admin systems, integrations, data workflows",
+      "OTP authentication, Stripe, PayPal, KBZ Pay, email delivery",
       "PostgreSQL, MySQL, MongoDB, Firebase",
     ],
   },
   {
-    title: "Frontend and product UX",
+    title: "Frontend, dashboards, and mobile workflows",
     summary:
       "Building fast interfaces that match business workflows, reduce friction, and stay maintainable after launch.",
     items: [
       "Next.js, React, TypeScript, Tailwind CSS",
-      "Responsive UI systems, dashboards, marketing sites",
-      "SEO-aware delivery and performance-focused rendering",
+      "User/admin dashboards, report history, CMS interfaces",
+      "React Native and Cordova support for mobile data entry and offline access",
     ],
   },
   {
@@ -111,9 +111,9 @@ export const capabilityGroups: CapabilityGroup[] = [
     summary:
       "Shipping features is only half the job. I also care about uptime, observability, and practical deployment workflows.",
     items: [
-      "AWS, Ubuntu, Linux, Docker, Nginx",
-      "Datadog, CI/CD, incident visibility, production support",
-      "Legacy migrations and infrastructure handoff",
+      "AWS, DigitalOcean, R2 Cloud Storage, Ubuntu, Linux",
+      "Docker, CI/CD, Nginx, Apache, Git",
+      "Datadog monitoring, error tracking, legacy migrations, infrastructure handoff",
     ],
   },
 ];
@@ -126,23 +126,35 @@ export const toolbelt = [
   "React",
   "TypeScript",
   "PostgreSQL",
-  "MySQL",
   "MongoDB",
+  "MySQL",
   "AWS",
+  "DigitalOcean",
+  "R2 Cloud Storage",
   "Docker",
+  "Nginx",
   "Datadog",
 ];
 
 export const experiences: ExperienceItem[] = [
   {
-    period: "Feb 2025 - Present",
-    company: "XynoTech",
-    role: "Full-stack Developer",
+    period: "Nov 2024 - Present",
+    company: "Siam Mandalar International",
+    role: "Full-stack Developer (Contract / Freelance)",
     location: "Remote",
     highlights: [
-      "Delivered a movie streaming platform with NestJS, Next.js, and cloud storage optimized for throughput and storage cost.",
-      "Built LMS and e-commerce product flows in Laravel to support operational efficiency and online transactions.",
-      "Shipped a tele-doctor platform with Express.js and Next.js focused on real-time consultations and retention.",
+      "Built jpauctionsheet.com, a Laravel-based vehicle history platform with VIN checking, user and admin dashboards, OTP authentication, credit packages, Stripe, PayPal, and KBZ Pay payments.",
+      "Implemented PDF report generation, email delivery, blogs, feedback workflows, and transaction tracking for paid vehicle history services.",
+      "Developed autovinhub.com, a Next.js and TypeScript VIN report platform connected to Laravel APIs for VIN image scanning, report credit purchases, Carfax and AutoCheck availability checks, and report history management.",
+    ],
+  },
+  {
+    period: "Feb 2025 - May 2026",
+    company: "XynoTech",
+    role: "Full Stack Developer",
+    location: "Remote",
+    highlights: [
+      "Deployed a high-speed movie streaming platform using NestJS, Next.js, and R2 Cloud Storage to improve delivery performance and storage cost efficiency.",
     ],
   },
   {
@@ -151,9 +163,9 @@ export const experiences: ExperienceItem[] = [
     role: "Full-stack Software Developer",
     location: "Singapore / Remote",
     highlights: [
-      "Worked on the SDAX platform migration from Java Spring WebFlux to Express.js and Next.js across user-facing and admin systems.",
-      "Integrated Datadog for proactive monitoring, production visibility, and faster issue response.",
-      "Built brand and commerce platforms for Viabells and A.M Skincare with a focus on performance and maintainability.",
+      "Contributed to the SDAX investment platform migration from Java Spring WebFlux to Express.js and Next.js across user-facing and admin systems.",
+      "Integrated Datadog for real-time monitoring and proactive error tracking to support 24/7 system availability.",
+      "Developed a high-performance portfolio for Viabells and a custom WordPress/PHP ecosystem for A.M Skincare.",
     ],
   },
   {
@@ -162,27 +174,28 @@ export const experiences: ExperienceItem[] = [
     role: "Software Developer",
     location: "Yangon, Myanmar",
     highlights: [
-      "Built government-focused data collection systems with Laravel and mobile support for synchronized field operations.",
-      "Delivered healthcare systems for clinics and labs covering patient workflows, reporting, and operational management.",
-      "Extended ISP billing software and offline mobile support for continuity in constrained environments.",
+      "Built a high-security Laravel and React Native data collection platform for the Ministry of Union Government, enabling synchronized web and mobile data entry.",
+      "Developed centralized web and mobile systems to improve accessibility and data accuracy for national disability records.",
+      "Engineered clinic and lab management systems with Laravel and Vue.js, streamlining patient tracking and diagnostic reporting.",
+      "Optimized the IQnet ISP billing system with new features and offline mobile support via Cordova to maintain service continuity.",
     ],
   },
   {
     period: "Dec 2021 - Jan 2022",
     company: "HeinLearn",
     role: "Backend Developer (Volunteer)",
-    location: "Remote",
+    location: "Myanmar / Remote",
     highlights: [
-      "Designed backend services for a school management platform in Laravel and PHP.",
+      "Designed a school management system backend using Laravel and PHP, delivering a scalable platform with a responsive Bootstrap interface.",
     ],
   },
   {
     period: "Jun 2021 - Oct 2021",
     company: "Marvellous Software Solution",
-    role: "Full-stack Junior Developer",
+    role: "Full-Stack Junior Developer (OJT)",
     location: "Yangon, Myanmar",
     highlights: [
-      "Contributed to web application delivery in a team environment and learned fast-paced production workflows.",
+      "Contributed to scalable web application development while collaborating with cross-functional teams to meet project milestones.",
     ],
   },
   {
@@ -191,37 +204,37 @@ export const experiences: ExperienceItem[] = [
     role: "WordPress Developer Intern",
     location: "Yangon, Myanmar",
     highlights: [
-      "Built and customized CMS experiences for clients who needed simple content operations and reliable responsive sites.",
+      "Architected and customized content management systems for diverse clients, focusing on intuitive interfaces for non-technical content management.",
     ],
   },
 ];
 
 export const education: CredentialItem[] = [
   {
-    year: "2020",
+    year: "Jul 2020",
     title: "BSc in Business Information Technology",
     subtitle: "University of Greenwich (UK)",
   },
   {
-    year: "2019",
+    year: "Mar 2019",
     title: "HND in Software Development",
-    subtitle: "Scottish Qualifications Authority",
+    subtitle: "Scottish Qualifications Authority (Scotland)",
   },
 ];
 
 export const certifications: CredentialItem[] = [
   {
-    year: "2024",
+    year: "Feb 2024",
     title: "DevOps Delivery",
     subtitle: "Dev KT Ops",
   },
   {
-    year: "2023",
+    year: "Feb 2023",
     title: "Rockstar Developer",
     subtitle: "Fairway Technology",
   },
   {
-    year: "2019",
+    year: "Jun 2019",
     title: "Professional Web Developer",
     subtitle: "Fairway Technology",
   },
@@ -260,22 +273,22 @@ export const projects: ProjectCaseStudy[] = [
     category: "Client project",
     heroLabel: "Vehicle data and report commerce",
     tagline:
-      "Built a VIN decoding and vehicle history platform with a conversion-focused frontend and a Laravel API backend.",
+      "Developed a Next.js and TypeScript VIN report platform connected to Laravel APIs for paid vehicle history workflows.",
     summary:
-      "AutoVinHub combines high-intent search behavior, report purchasing, and secure account workflows. The implementation needed to feel fast for users while keeping the backend structured around payments and data retrieval.",
+      "AutoVinHub combines VIN image scanning, report availability checks, credit purchasing, and report history management. The implementation needed to feel fast for users while keeping the backend structured around payments, data retrieval, and account workflows.",
     role: "Full-stack Developer",
-    engagement: "Consulting build",
-    company: "AutoVinHub",
+    engagement: "Nov 2024 - Present",
+    company: "Siam Mandalar International",
     liveUrl: "https://autovinhub.com/",
-    stack: ["Next.js", "Laravel", "Tailwind CSS", "Payment flows", "AWS", "Ubuntu"],
+    stack: ["Next.js", "TypeScript", "Laravel APIs", "Stripe", "VIN scanning", "Tailwind CSS"],
     outcomes: [
-      "Delivered a search-first vehicle platform with secure report purchasing flows.",
-      "Combined a fast frontend experience with a Laravel backend suited for integrations and account workflows.",
-      "Shipped a production-ready site with a focus on speed, trust, and clear conversion paths.",
+      "Enabled users to scan VIN images, check Carfax and AutoCheck availability, and manage purchased reports.",
+      "Connected a fast frontend experience to Laravel APIs suited for payments, report credits, and account workflows.",
+      "Shipped a production-ready platform focused on trust, speed, and clear conversion paths.",
     ],
     responsibilities: [
       "Built the end-to-end application architecture across frontend, backend, and deployment.",
-      "Implemented authenticated user flows, payments, and search experiences tailored to vehicle report buyers.",
+      "Implemented authenticated user flows, Stripe report credit purchases, report history, and VIN-focused search experiences.",
       "Optimized the product around practical performance and reliability for public traffic.",
     ],
     image: AutoVinHubImage,
@@ -310,24 +323,24 @@ export const projects: ProjectCaseStudy[] = [
     slug: "JPAuctionSheet",
     title: "JP Auction Sheet",
     category: "Client project",
-    heroLabel: "Search and payment workflow for automotive buyers",
+    heroLabel: "Vehicle history checking and payment workflow",
     tagline:
-      "Created a specialized platform for reviewing Japanese vehicle auction sheets with image-heavy search and multiple payment methods.",
+      "Built a Laravel-based vehicle history platform with VIN checking, dashboards, OTP authentication, report generation, and multiple payment methods.",
     summary:
-      "Users needed a trustworthy way to search, inspect, and purchase access to auction sheet data. The system was built to make that process straightforward while handling high-resolution assets and payment integration.",
+      "Users needed a trustworthy way to check VIN records, purchase report credits, and receive vehicle history reports. The system was built around a Laravel backend with user and admin dashboards, payment integrations, PDF generation, email delivery, and transaction tracking.",
     role: "Full-stack Developer",
-    engagement: "Consulting build",
-    company: "JP Auction Sheet",
+    engagement: "Nov 2024 - Present",
+    company: "Siam Mandalar International",
     liveUrl: "https://jpauctionsheet.com/",
-    stack: ["Laravel", "PHP", "jQuery", "Stripe", "KBZ Pay", "AWS"],
+    stack: ["Laravel", "PHP", "OTP auth", "Stripe", "PayPal", "KBZ Pay", "PDF reports"],
     outcomes: [
-      "Built a domain-specific search experience for car buyers and dealers.",
-      "Integrated global and local payment options to match the target market.",
-      "Handled image processing and delivery for data that users needed to inspect carefully.",
+      "Built VIN checking and report-credit workflows for car buyers and dealers.",
+      "Integrated global and local payment options including Stripe, PayPal, and KBZ Pay.",
+      "Delivered admin tooling for transactions, blogs, feedback, PDF reports, and email delivery.",
     ],
     responsibilities: [
       "Translated a niche automotive workflow into a product that non-technical customers could use confidently.",
-      "Managed payment integrations and backend logic for paid access to records.",
+      "Managed payment integrations, OTP authentication, backend logic, and report generation for paid access to records.",
       "Delivered the platform with production hosting and operational reliability in mind.",
     ],
     image: JPAuctionSheetImage,

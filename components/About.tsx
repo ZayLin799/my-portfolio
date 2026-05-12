@@ -25,14 +25,16 @@ const About = () => {
           </p>
           <p className="body-copy">
             Over the last {yearsOfExperience}+ years, I have worked on systems for
-            investment products, national-scale data collection, healthcare
-            operations, e-commerce, and service businesses. That range matters
-            because it taught me how to adapt quickly without lowering quality.
+            vehicle history, investment products, national-scale data collection,
+            healthcare operations, education, media, and service businesses. That
+            range matters because it taught me how to adapt quickly without
+            lowering quality.
           </p>
           <p className="body-copy">
             I am comfortable taking a feature from planning to production:
             shaping the interface, building the API layer, handling data
-            concerns, and supporting deployment and monitoring after release.
+            concerns, integrating payments or third-party services, and
+            supporting deployment and monitoring after release.
           </p>
 
           <div style={{ marginTop: "auto", paddingTop: "1rem", borderTop: "1px solid rgba(22, 33, 27, 0.08)" }}>
@@ -71,11 +73,11 @@ const About = () => {
             </div>
             <div className="snapshot-row">
               <span>Preferred work</span>
-              <strong>All full-time roles</strong>
+              <strong>Full-time, contract, and freelance product work</strong>
             </div>
             <div className="snapshot-row">
               <span>Focus areas</span>
-              <strong>Modernization, product delivery, platform reliability</strong>
+              <strong>Secure backends, scalable design, clean architecture</strong>
             </div>
           </div>
         </aside>

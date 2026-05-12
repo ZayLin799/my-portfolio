@@ -9,7 +9,7 @@ const Experience = () => {
     <section id="experience" className="section-shell">
       <div className="section-heading">
         <p className="eyebrow">Experience</p>
-        <h2>Career path focused on production software, not tutorial projects.</h2>
+        <h2>Career path across production web, mobile, and platform systems.</h2>
       </div>
 
       <div className="experience-layout">
