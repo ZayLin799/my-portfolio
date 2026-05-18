@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg { fill: #ffffff; }
+    .border { stroke: #b6d7ff; }
+    .tile { fill: #ddf4ff; }
+    .mark { fill: #0969da; }
+
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0d1117; }
+      .border { stroke: rgba(88, 166, 255, 0.42); }
+      .tile { fill: rgba(56, 139, 253, 0.18); }
+      .mark { fill: #58a6ff; }
+    }
+  </style>
+  <rect class="bg" x="4" y="4" width="56" height="56" rx="16" />
+  <rect class="border" x="4.5" y="4.5" width="55" height="55" rx="15.5" fill="none" />
+  <rect class="tile" x="12" y="12" width="40" height="40" rx="12" />
+  <path
+    class="mark"
+    d="M20 22.5h15.4v4.1L26.7 37H35v4.5H19.6v-4.1l8.8-10.4H20v-4.5Zm19 0h5v14.4h7v4.6H39v-19Z"
+  />
+</svg>

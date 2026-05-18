@@ -106,7 +106,7 @@ const Contact = () => {
 
           </div>
 
-          <div className="contact-links" style={{ marginTop: "2rem", paddingTop: "1.5rem", borderTop: "1px solid rgba(22, 33, 27, 0.08)" }}>
+          <div className="contact-links contact-social-links">
             <a href={personalProfile.linkedinUrl} target="_blank" rel="noreferrer">
               <FaLinkedinIn size={18} />
               LinkedIn

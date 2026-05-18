@@ -16,10 +16,7 @@ const About = () => {
       </div>
 
       <div className="about-grid">
-        <article 
-          className="surface-panel about-copy"
-          style={{ display: "flex", flexDirection: "column", gap: "1.5rem", height: "100%" }}
-        >
+        <article className="surface-panel about-copy">
           <p className="lead-copy">
             {personalProfile.aboutSummary}
           </p>
@@ -37,12 +34,12 @@ const About = () => {
             supporting deployment and monitoring after release.
           </p>
 
-          <div style={{ marginTop: "auto", paddingTop: "1rem", borderTop: "1px solid rgba(22, 33, 27, 0.08)" }}>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <span style={{ fontSize: "0.85rem", fontWeight: "700", color: "var(--accent)" }}>WANT TO DIG DEEPER?</span>
+          <div className="about-cta">
+            <div className="about-cta-inner">
+              <div className="about-cta-label">
+                <span>WANT TO DIG DEEPER?</span>
               </div>
-              <div className="contact-links" style={{ display: "flex", gap: "1.25rem" }}>
+              <div className="contact-links about-links">
                 <a href={personalProfile.githubUrl} target="_blank" rel="noreferrer" className="text-link">
                   Open GitHub
                 </a>

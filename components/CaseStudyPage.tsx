@@ -99,7 +99,7 @@ const CaseStudyPage = ({ project }: CaseStudyPageProps) => {
         </aside>
       </section>
 
-      <div className="back-link-wrap" style={{ paddingBottom: "5rem" }}>
+      <div className="back-link-wrap case-study-back-link">
         <Link href="/#projects" className="back-link">
           <AiOutlineArrowLeft size={18} />
           Back to selected work

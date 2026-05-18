@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 import { personalProfile } from "../data/portfolio";
 
@@ -15,6 +16,8 @@ const navItems = [
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [themeReady, setThemeReady] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 24);
@@ -30,6 +33,31 @@ const Navbar = () => {
       document.body.style.overflow = "auto";
     };
   }, [menuOpen]);
+
+  useEffect(() => {
+    const storedTheme = window.localStorage.getItem("portfolio-theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initialTheme = storedTheme === "dark" || storedTheme === "light"
+      ? storedTheme
+      : prefersDark
+        ? "dark"
+        : "light";
+
+    setTheme(initialTheme);
+    document.documentElement.dataset.theme = initialTheme;
+    setThemeReady(true);
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+
+    setTheme(nextTheme);
+    document.documentElement.dataset.theme = nextTheme;
+    window.localStorage.setItem("portfolio-theme", nextTheme);
+  };
+
+  const themeLabel = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+  const ThemeIcon = theme === "dark" ? FaSun : FaMoon;
 
   return (
     <>
@@ -59,7 +87,28 @@ const Navbar = () => {
             >
               Resume
             </a>
+            <button
+              type="button"
+              className="theme-toggle"
+              onClick={toggleTheme}
+              aria-label={themeLabel}
+              title={themeLabel}
+              suppressHydrationWarning
+            >
+              {themeReady && <ThemeIcon size={16} />}
+            </button>
           </div>
+
+          <button
+            type="button"
+            className="theme-toggle mobile-theme-toggle"
+            onClick={toggleTheme}
+            aria-label={themeLabel}
+            title={themeLabel}
+            suppressHydrationWarning
+          >
+            {themeReady && <ThemeIcon size={16} />}
+          </button>
 
           <button
             type="button"
@@ -79,12 +128,11 @@ const Navbar = () => {
 
       <aside className={`mobile-drawer ${menuOpen ? "mobile-drawer-open" : ""}`}>
         <div className="mobile-drawer-inner">
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
-            <p className="eyebrow" style={{ margin: 0 }}>Navigation</p>
+          <div className="mobile-drawer-header">
+            <p className="eyebrow">Navigation</p>
             <button
               type="button"
               className="menu-toggle"
-              style={{ display: "flex" }}
               onClick={() => setMenuOpen(false)}
               aria-label="Close navigation"
             >
@@ -111,6 +159,10 @@ const Navbar = () => {
           >
             Download resume
           </a>
+          <button type="button" className="theme-toggle theme-toggle-wide" onClick={toggleTheme}>
+            {themeReady && <ThemeIcon size={16} />}
+            {theme === "dark" ? "Light mode" : "Dark mode"}
+          </button>
         </div>
       </aside>
     </>

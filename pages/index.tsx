@@ -28,7 +28,6 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={personalProfile.website} />
         <link rel="canonical" href={personalProfile.website} />
-        <link rel="icon" href="/fav.png" />
       </Head>
 
       <main className="page-shell">
