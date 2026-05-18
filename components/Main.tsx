@@ -21,7 +21,12 @@ const Main = () => {
           <Link href="/#projects" className="button-primary">
             View selected work
           </Link>
-          <a href={personalProfile.resumeUrl} className="button-secondary">
+          <a
+            href={personalProfile.resumeUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="button-secondary"
+          >
             Download resume
           </a>
         </div>

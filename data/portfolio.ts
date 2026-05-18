@@ -55,16 +55,15 @@ export const personalProfile = {
   name: "Zay Lin Htet",
   title: "Senior Full-Stack Software Developer",
   email: "zaylin13.dev@gmail.com",
-  phone: "+66 889131528",
-  location: "Thailand / Remote",
+  phone: "+66 889131528 / +95 9795927748",
+  location: "Onsite / Remote / Hybrid",
   nationality: "Myanmar",
   website: "https://www.zaylinhtet.online/",
-  resumeUrl: "/Zay-Lin-Htet-CV.pdf",
+  resumeUrl: "/ZayLinHtet_FullStackDeveloper_Resume.pdf",
   linkedinUrl: "https://www.linkedin.com/in/zay-lin-htet",
   githubUrl: "https://github.com/ZayLin799",
   heroEyebrow: "Senior full-stack developer based in Thailand",
-  heroTitle:
-    "I design, modernize, and ship secure web and mobile platforms.",
+  heroTitle: "I design, modernize, and ship secure web and mobile platforms.",
   heroSummary:
     "5+ years building high-availability systems with Node.js, NestJS, Laravel, Next.js, React, cloud infrastructure, payments, monitoring, and production support.",
   aboutSummary:
@@ -74,8 +73,14 @@ export const personalProfile = {
 
 export const recruiterStats: RecruiterStat[] = [
   { value: "5+ years", label: "Full-stack software delivery" },
-  { value: "7 roles", label: "Full-time, contract, volunteer, and intern work" },
-  { value: "6 sectors", label: "Automotive, fintech, govtech, healthtech, education, media" },
+  {
+    value: "7 roles",
+    label: "Full-time, contract, volunteer, and intern work",
+  },
+  {
+    value: "6 sectors",
+    label: "Automotive, fintech, govtech, healthtech, education, media",
+  },
   { value: "7 projects", label: "Production examples across this portfolio" },
 ];
 
@@ -141,7 +146,7 @@ export const experiences: ExperienceItem[] = [
     period: "Nov 2024 - Present",
     company: "Siam Mandalar International",
     role: "Full-stack Developer (Contract / Freelance)",
-    location: "Remote",
+    location: "Thailand / Remote",
     highlights: [
       "Built jpauctionsheet.com, a Laravel-based vehicle history platform with VIN checking, user and admin dashboards, OTP authentication, credit packages, Stripe, PayPal, and KBZ Pay payments.",
       "Implemented PDF report generation, email delivery, blogs, feedback workflows, and transaction tracking for paid vehicle history services.",
@@ -152,7 +157,7 @@ export const experiences: ExperienceItem[] = [
     period: "Feb 2025 - May 2026",
     company: "XynoTech",
     role: "Full Stack Developer",
-    location: "Remote",
+    location: "Thailand /Remote",
     highlights: [
       "Deployed a high-speed movie streaming platform using NestJS, Next.js, and R2 Cloud Storage to improve delivery performance and storage cost efficiency.",
     ],
@@ -254,7 +259,14 @@ export const projects: ProjectCaseStudy[] = [
     engagement: "Feb 2023 - Feb 2025",
     company: "VIABELLS PTE. LTD.",
     liveUrl: "https://www.sdax.co/",
-    stack: ["Next.js", "Express.js", "TypeScript", "Java Spring", "Datadog", "Docker"],
+    stack: [
+      "Next.js",
+      "Express.js",
+      "TypeScript",
+      "Java Spring",
+      "Datadog",
+      "Docker",
+    ],
     outcomes: [
       "Helped move platform functionality toward a modern Node.js and Next.js stack.",
       "Maintained mission-critical admin and user-facing surfaces in a production fintech environment.",
@@ -280,7 +292,14 @@ export const projects: ProjectCaseStudy[] = [
     engagement: "Nov 2024 - Present",
     company: "Siam Mandalar International",
     liveUrl: "https://autovinhub.com/",
-    stack: ["Next.js", "TypeScript", "Laravel APIs", "Stripe", "VIN scanning", "Tailwind CSS"],
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Laravel APIs",
+      "Stripe",
+      "VIN scanning",
+      "Tailwind CSS",
+    ],
     outcomes: [
       "Enabled users to scan VIN images, check Carfax and AutoCheck availability, and manage purchased reports.",
       "Connected a fast frontend experience to Laravel APIs suited for payments, report credits, and account workflows.",
@@ -332,7 +351,15 @@ export const projects: ProjectCaseStudy[] = [
     engagement: "Nov 2024 - Present",
     company: "Siam Mandalar International",
     liveUrl: "https://jpauctionsheet.com/",
-    stack: ["Laravel", "PHP", "OTP auth", "Stripe", "PayPal", "KBZ Pay", "PDF reports"],
+    stack: [
+      "Laravel",
+      "PHP",
+      "OTP auth",
+      "Stripe",
+      "PayPal",
+      "KBZ Pay",
+      "PDF reports",
+    ],
     outcomes: [
       "Built VIN checking and report-credit workflows for car buyers and dealers.",
       "Integrated global and local payment options including Stripe, PayPal, and KBZ Pay.",

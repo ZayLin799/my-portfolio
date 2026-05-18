@@ -51,7 +51,12 @@ const Navbar = () => {
                 </Link>
               ))}
             </div>
-            <a href={personalProfile.resumeUrl} className="button-secondary">
+            <a
+              href={personalProfile.resumeUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="button-secondary"
+            >
               Resume
             </a>
           </div>
@@ -98,7 +103,12 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-          <a href={personalProfile.resumeUrl} className="button-primary">
+          <a
+            href={personalProfile.resumeUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="button-primary"
+          >
             Download resume
           </a>
         </div>

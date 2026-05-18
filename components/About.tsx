@@ -46,7 +46,12 @@ const About = () => {
                 <a href={personalProfile.githubUrl} target="_blank" rel="noreferrer" className="text-link">
                   Open GitHub
                 </a>
-                <a href={personalProfile.resumeUrl} className="text-link">
+                <a
+                  href={personalProfile.resumeUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-link"
+                >
                   View PDF Resume
                 </a>
               </div>

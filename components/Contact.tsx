@@ -115,7 +115,7 @@ const Contact = () => {
               <FaGithub size={18} />
               GitHub
             </a>
-            <a href={personalProfile.resumeUrl}>
+            <a href={personalProfile.resumeUrl} target="_blank" rel="noreferrer">
               <BsFillPersonLinesFill size={18} />
               Resume
             </a>
