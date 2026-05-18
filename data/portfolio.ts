@@ -56,7 +56,7 @@ export const personalProfile = {
   title: "Senior Full-Stack Software Developer",
   email: "zaylin13.dev@gmail.com",
   phone: "+66 889131528 / +95 9795927748",
-  location: "Onsite / Remote / Hybrid",
+  location: "Open to All Opportunities (Based in Thailand)",
   nationality: "Myanmar",
   website: "https://www.zaylinhtet.online/",
   resumeUrl: "/ZayLinHtet_FullStackDeveloper_Resume.pdf",
