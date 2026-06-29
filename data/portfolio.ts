@@ -5,6 +5,7 @@ import AmSkinImage from "../public/assets/projects/am-skin.png";
 import AutoVinHubImage from "../public/assets/projects/AutoVinHub.png";
 import JPAuctionSheetImage from "../public/assets/projects/jpauctionsheet.png";
 import LittleMyanmarImage from "../public/assets/projects/little-myanmar.jpg";
+import PinkpopPosImage from "../public/assets/projects/pinkpop-pos.png";
 import SdaxImage from "../public/assets/projects/sdax.png";
 import ViabellsImage from "../public/assets/projects/viabells.png";
 import YunHomeImage from "../public/assets/projects/YunHome.png";
@@ -78,10 +79,10 @@ export const recruiterStats: RecruiterStat[] = [
     label: "Full-time, contract, volunteer, and intern work",
   },
   {
-    value: "6 sectors",
-    label: "Automotive, fintech, govtech, healthtech, education, media",
+    value: "7 sectors",
+    label: "Automotive, fintech, govtech, healthtech, education, media, retail",
   },
-  { value: "7 projects", label: "Production examples across this portfolio" },
+  { value: "8 projects", label: "Production examples across this portfolio" },
 ];
 
 export const recruiterSignals = [
@@ -449,6 +450,39 @@ export const projects: ProjectCaseStudy[] = [
       "Balanced brand design requirements with practical performance considerations.",
     ],
     image: AmSkinImage,
+  },
+  {
+    slug: "pinkpop-pos",
+    title: "Pinkpop POS",
+    category: "Freelance project",
+    heroLabel: "Custom retail point of sale (POS) and inventory platform",
+    tagline:
+      "Engineered a fully customized, real-time POS and inventory management ecosystem to streamline daily retail operations.",
+    summary:
+      "Pinkpop POS is a tailor-made retail management system. Built using Laravel 12, Inertia.js, and React 19 with Tailwind CSS, the platform connects cashiers, store managers, and administrators through a unified, high-performance interface. It provides comprehensive control over master data (products, categories, units, payments), sales registration (new sales, logs, calendar views), procurement, expense tracking, customer/supplier credit systems, and multi-dimensional financial and stock reports.",
+    role: "Full-stack Developer",
+    engagement: "Freelance Build",
+    company: "Pinkpop POS",
+    liveUrl: "",
+    stack: [
+      "Laravel",
+      "React",
+      "Inertia.js",
+      "Tailwind CSS",
+      "MySQL",
+      "TypeScript",
+    ],
+    outcomes: [
+      "Delivered a real-time cashier checkout terminal with barcode integration and custom discount logic.",
+      "Built a complete inventory lifecycle tracking system with low-stock alerts, transfers, and adjustments.",
+      "Implemented a secure admin dashboard with granular permissions and automated financial/profit reporting.",
+    ],
+    responsibilities: [
+      "Designed database architecture, seeders, and RESTful endpoints using Laravel 12.",
+      "Created a modern, high-speed SPA frontend utilizing React 19, Inertia.js, and Radix UI components.",
+      "Integrated custom PDF generation for transaction invoices, credit summaries, and sales logs.",
+    ],
+    image: PinkpopPosImage,
   },
 ];
 

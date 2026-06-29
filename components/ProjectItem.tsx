@@ -40,10 +40,12 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
           <Link href={`/${project.slug}`} className="text-link">
             Read case study
           </Link>
-          <a href={project.liveUrl} target="_blank" rel="noreferrer" className="text-link">
-            Visit live site
-            <AiOutlineArrowRight size={16} />
-          </a>
+          {project.liveUrl && (
+            <a href={project.liveUrl} target="_blank" rel="noreferrer" className="text-link">
+              Visit live site
+              <AiOutlineArrowRight size={16} />
+            </a>
+          )}
         </div>
       </div>
     </article>

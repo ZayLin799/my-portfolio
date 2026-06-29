@@ -29,17 +29,24 @@ const CaseStudyPage = ({ project }: CaseStudyPageProps) => {
               <span>Company</span>
               <strong>{project.company}</strong>
             </div>
-            <a
-              className="info-tile info-link"
-              href={project.liveUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>Live site</span>
-              <strong>
-                Visit project <AiOutlineArrowRight size={16} />
-              </strong>
-            </a>
+            {project.liveUrl ? (
+              <a
+                className="info-tile info-link"
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Live site</span>
+                <strong>
+                  Visit project <AiOutlineArrowRight size={16} />
+                </strong>
+              </a>
+            ) : (
+              <div className="info-tile">
+                <span>Deployment</span>
+                <strong>Internal Network</strong>
+              </div>
+            )}
           </div>
         </div>
 
