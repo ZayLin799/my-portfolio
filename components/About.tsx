@@ -21,17 +21,17 @@ const About = () => {
             {personalProfile.aboutSummary}
           </p>
           <p className="body-copy">
-            Over the last {yearsOfExperience}+ years, I have worked on systems for
-            vehicle history, investment products, national-scale data collection,
-            healthcare operations, education, media, and service businesses. That
-            range matters because it taught me how to adapt quickly without
-            lowering quality.
+            Over the last {yearsOfExperience}+ years, I have worked across
+            fintech, streaming, healthcare, government, automotive, education,
+            and media systems. That breadth taught me how to adapt quickly,
+            contribute in regulated environments, and deliver without lowering
+            quality.
           </p>
           <p className="body-copy">
-            I am comfortable taking a feature from planning to production:
-            shaping the interface, building the API layer, handling data
-            concerns, integrating payments or third-party services, and
-            supporting deployment and monitoring after release.
+            I take features from planning to production: shaping the interface,
+            building the API layer, handling data concerns, integrating payments
+            or third-party services, and supporting deployment and monitoring
+            after release.
           </p>
 
           <div className="about-cta">

@@ -66,9 +66,9 @@ export const personalProfile = {
   heroEyebrow: "Senior full-stack developer",
   heroTitle: "I design, modernize, and ship secure web and mobile platforms.",
   heroSummary:
-    "5+ years building high-availability systems with Node.js, NestJS, Laravel, Next.js, React, cloud infrastructure, payments, monitoring, and production support.",
+    "Senior Full-Stack Developer with 5+ years of experience building modern, scalable, and user-friendly web applications. Skilled in Laravel, NestJS, React, Next.js, TypeScript, and cloud technologies, with experience in fintech, streaming, healthcare, and management systems.",
   aboutSummary:
-    "I specialize in secure distributed backends, fast user-centric frontends, and practical architecture for products that need to scale without becoming hard to operate.",
+    "Passionate about solving problems, learning new technologies, and creating clean and reliable solutions. A fast learner and team player who enjoys working in collaborative environments and building products that make a real impact.",
   aboutImage: AboutImage,
 };
 
@@ -87,8 +87,8 @@ export const recruiterStats: RecruiterStat[] = [
 
 export const recruiterSignals = [
   "Built Laravel, NestJS, Express.js, Next.js, and React systems in production",
-  "Handled payment flows, OTP auth, report generation, monitoring, and deployment",
-  "Experienced with legacy modernization, dashboards, mobile support, and cloud storage",
+  "Handled payment flows, OTP auth, PDF reports, Datadog monitoring, and cloud deployment",
+  "Experienced with microservices architecture, legacy modernization, mobile support, and cloud storage",
 ];
 
 export const capabilityGroups: CapabilityGroup[] = [
@@ -157,33 +157,34 @@ export const experiences: ExperienceItem[] = [
   {
     period: "Feb 2025 - May 2026",
     company: "XynoTech",
-    role: "Full Stack Developer",
-    location: "Thailand /Remote",
+    role: "Full Stack Developer (Fulltime)",
+    location: "Thailand / Remote",
     highlights: [
-      "Deployed a high-speed movie streaming platform using NestJS, Next.js, and R2 Cloud Storage to improve delivery performance and storage cost efficiency.",
+      "Deployed a high-speed Movie Streaming Platform using NestJS, Next.js, and R2 Cloud Storage to optimize delivery performance and storage cost efficiency.",
     ],
   },
   {
     period: "Feb 2023 - Feb 2025",
     company: "VIABELLS PTE. LTD.",
-    role: "Full-stack Software Developer",
+    role: "Full-stack Software Developer (Fulltime)",
     location: "Singapore / Remote",
     highlights: [
-      "Contributed to the SDAX investment platform migration from Java Spring WebFlux to Express.js and Next.js across user-facing and admin systems.",
-      "Integrated Datadog for real-time monitoring and proactive error tracking to support 24/7 system availability.",
+      "Contributed to the SDAX investment platform migration from Java Spring WebFlux to Express.js and Next.js, splitting the platform into separate repositories for investor and issuer modules to improve performance.",
+      "Built and maintained standalone microservices for automated email sending and Web3 features as part of a distributed service architecture.",
+      "Integrated Datadog for real-time monitoring and proactive error tracking to ensure 24/7 system availability.",
       "Developed a high-performance portfolio for Viabells and a custom WordPress/PHP ecosystem for A.M Skincare.",
     ],
   },
   {
     period: "Jan 2022 - Feb 2023",
     company: "AGGA.IO Co., Ltd",
-    role: "Software Developer",
+    role: "Software Developer (Fulltime)",
     location: "Yangon, Myanmar",
     highlights: [
       "Built a high-security Laravel and React Native data collection platform for the Ministry of Union Government, enabling synchronized web and mobile data entry.",
-      "Developed centralized web and mobile systems to improve accessibility and data accuracy for national disability records.",
-      "Engineered clinic and lab management systems with Laravel and Vue.js, streamlining patient tracking and diagnostic reporting.",
-      "Optimized the IQnet ISP billing system with new features and offline mobile support via Cordova to maintain service continuity.",
+      "Developed a centralized web and mobile management system to improve accessibility and data accuracy for national disability records.",
+      "Engineered Clinic and Lab Management Systems using Laravel and Vue.js, streamlining patient tracking and diagnostic reporting for medical facilities.",
+      "Optimized the IQnet ISP Billing System by implementing new features and offline mobile support via Cordova to ensure service continuity.",
     ],
   },
   {
