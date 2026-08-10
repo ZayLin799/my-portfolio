@@ -151,7 +151,7 @@ export const experiences: ExperienceItem[] = [
     highlights: [
       "Built jpauctionsheet.com, a Laravel-based vehicle history platform with VIN checking, user and admin dashboards, OTP authentication, credit packages, Stripe, PayPal, and KBZ Pay payments.",
       "Implemented PDF report generation, email delivery, blogs, feedback workflows, and transaction tracking for paid vehicle history services.",
-      "Developed autovinhub.com, a Next.js and TypeScript VIN report platform connected to Laravel APIs for VIN image scanning, report credit purchases, Carfax and AutoCheck availability checks, and report history management.",
+      "Developed autovinhub.com, a Next.js and TypeScript VIN report platform connected to NestJS APIs, enabling users to scan VIN images, check Carfax and AutoCheck availability, purchase report credits with Stripe, generate vehicle history reports, and manage report history.",
     ],
   },
   {
@@ -199,7 +199,7 @@ export const experiences: ExperienceItem[] = [
   {
     period: "Jun 2019 - Jan 2020",
     company: "I-See Media",
-    role: "WordPress Developer Intern",
+    role: "WordPress Developer (Intern)",
     location: "Yangon, Myanmar",
     highlights: [
       "Architected and customized content management systems for diverse clients, focusing on intuitive interfaces for non-technical content management.",
@@ -278,24 +278,24 @@ export const projects: ProjectCaseStudy[] = [
     category: "Client project",
     heroLabel: "Vehicle data and report commerce",
     tagline:
-      "Developed a Next.js and TypeScript VIN report platform connected to Laravel APIs for paid vehicle history workflows.",
+      "Developed a Next.js and TypeScript VIN report platform connected to NestJS APIs for paid vehicle history workflows.",
     summary:
-      "AutoVinHub combines VIN image scanning, report availability checks, credit purchasing, and report history management. The implementation needed to feel fast for users while keeping the backend structured around payments, data retrieval, and account workflows.",
+      "AutoVinHub combines VIN image scanning, report availability checks, credit purchasing, and report history management. The implementation needed to feel fast for users while keeping the NestJS backend structured around payments, data retrieval, and account workflows.",
     role: "Full-stack Developer",
-    engagement: "Nov 2024 - Present",
+    engagement: "Feb 2025 - Present",
     company: "Siam Mandalar International",
     liveUrl: "https://autovinhub.com/",
     stack: [
       "Next.js",
       "TypeScript",
-      "Laravel APIs",
+      "NestJS",
       "Stripe",
       "VIN scanning",
       "Tailwind CSS",
     ],
     outcomes: [
-      "Enabled users to scan VIN images, check Carfax and AutoCheck availability, and manage purchased reports.",
-      "Connected a fast frontend experience to Laravel APIs suited for payments, report credits, and account workflows.",
+      "Enabled users to scan VIN images, check Carfax and AutoCheck availability, purchase report credits with Stripe, and manage generated reports.",
+      "Connected a fast frontend experience to NestJS APIs suited for payments, report credits, and account workflows.",
       "Shipped a production-ready platform focused on trust, speed, and clear conversion paths.",
     ],
     responsibilities: [
@@ -341,7 +341,7 @@ export const projects: ProjectCaseStudy[] = [
     summary:
       "Users needed a trustworthy way to check VIN records, purchase report credits, and receive vehicle history reports. The system was built around a Laravel backend with user and admin dashboards, payment integrations, PDF generation, email delivery, and transaction tracking.",
     role: "Full-stack Developer",
-    engagement: "Nov 2024 - Present",
+    engagement: "Feb 2025 - Present",
     company: "Siam Mandalar International",
     liveUrl: "https://jpauctionsheet.com/",
     stack: [
