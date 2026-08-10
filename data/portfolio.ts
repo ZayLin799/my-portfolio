@@ -144,23 +144,14 @@ export const toolbelt = [
 
 export const experiences: ExperienceItem[] = [
   {
-    period: "Nov 2024 - Present",
+    period: "Feb 2025 - Present",
     company: "Siam Mandalar International",
-    role: "Full-stack Developer (Contract / Freelance)",
+    role: "Full-stack Developer (Contract)",
     location: "Thailand / Remote",
     highlights: [
       "Built jpauctionsheet.com, a Laravel-based vehicle history platform with VIN checking, user and admin dashboards, OTP authentication, credit packages, Stripe, PayPal, and KBZ Pay payments.",
       "Implemented PDF report generation, email delivery, blogs, feedback workflows, and transaction tracking for paid vehicle history services.",
       "Developed autovinhub.com, a Next.js and TypeScript VIN report platform connected to Laravel APIs for VIN image scanning, report credit purchases, Carfax and AutoCheck availability checks, and report history management.",
-    ],
-  },
-  {
-    period: "Feb 2025 - May 2026",
-    company: "XynoTech",
-    role: "Full Stack Developer (Fulltime)",
-    location: "Thailand / Remote",
-    highlights: [
-      "Deployed a high-speed Movie Streaming Platform using NestJS, Next.js, and R2 Cloud Storage to optimize delivery performance and storage cost efficiency.",
     ],
   },
   {
