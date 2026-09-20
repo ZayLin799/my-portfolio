@@ -3,11 +3,6 @@ import Image from "next/image";
 import { personalProfile } from "../data/portfolio";
 
 const About = () => {
-  const yearsOfExperience = Math.floor(
-    (new Date().getTime() - new Date(2020, 5).getTime()) /
-      (1000 * 60 * 60 * 24 * 365.25)
-  );
-
   return (
     <section id="about" className="section-shell">
       <div className="section-heading">
@@ -21,17 +16,15 @@ const About = () => {
             {personalProfile.aboutSummary}
           </p>
           <p className="body-copy">
-            Over the last {yearsOfExperience}+ years, I have worked across
-            fintech, streaming, healthcare, government, automotive, education,
-            and media systems. That breadth taught me how to adapt quickly,
-            contribute in regulated environments, and deliver without lowering
-            quality.
+            Over the last 5+ years, I have delivered business
+            applications across Myanmar, Singapore, and Thailand for fintech,
+            automotive, healthcare, government, and telecom teams.
           </p>
           <p className="body-copy">
             I take features from planning to production: shaping the interface,
-            building the API layer, handling data concerns, integrating payments
-            or third-party services, and supporting deployment and monitoring
-            after release.
+            building secure APIs, handling data concerns, integrating local and
+            international payments or third-party services, and supporting
+            deployment, monitoring, and troubleshooting after release.
           </p>
 
           <div className="about-cta">
@@ -71,7 +64,7 @@ const About = () => {
           <div className="snapshot-list">
             <div className="snapshot-row">
               <span>Work preference</span>
-              <strong>{personalProfile.location}</strong>
+              <strong>Remote and international teams</strong>
             </div>
             <div className="snapshot-row">
               <span>Preferred work</span>
@@ -79,7 +72,7 @@ const About = () => {
             </div>
             <div className="snapshot-row">
               <span>Focus areas</span>
-              <strong>Secure backends, scalable design, clean architecture</strong>
+              <strong>Full-cycle delivery, secure APIs, production reliability</strong>
             </div>
           </div>
         </aside>

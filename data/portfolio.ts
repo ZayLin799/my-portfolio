@@ -54,10 +54,10 @@ export interface ProjectCaseStudy {
 
 export const personalProfile = {
   name: "Zay Lin Htet",
-  title: "Senior Full-Stack Software Developer",
+  title: "Senior Full-Stack Developer",
   email: "zaylin13.dev@gmail.com",
-  phone: "+66 889131528 / +95 9795927748",
-  location: "Open to All Opportunities",
+  phone: "+95 9795927748",
+  location: "Yangon, Myanmar",
   nationality: "Myanmar",
   website: "https://www.zaylinhtet.online/",
   resumeUrl: "/ZayLinHtet_FullStackDeveloper_Resume.pdf",
@@ -66,60 +66,63 @@ export const personalProfile = {
   heroEyebrow: "Senior full-stack developer",
   heroTitle: "I design, modernize, and ship secure web and mobile platforms.",
   heroSummary:
-    "Senior Full-Stack Developer with 5+ years of experience building modern, scalable, and user-friendly web applications. Skilled in Laravel, NestJS, React, Next.js, TypeScript, and cloud technologies, with experience in fintech, streaming, healthcare, and management systems.",
+    "Senior Full-Stack Developer with 5+ years of experience delivering business applications across Myanmar, Singapore, and Thailand, from requirements and planning to system design and end-user release. Hands-on with Laravel/PHP, React, Next.js, Node.js, NestJS, and TypeScript across fintech, automotive, healthcare, government, and telecom.",
   aboutSummary:
-    "Passionate about solving problems, learning new technologies, and creating clean and reliable solutions. A fast learner and team player who enjoys working in collaborative environments and building products that make a real impact.",
+    "Experienced in local and international payment integrations, AI-assisted development with code review and testing, and production reliability through monitoring and troubleshooting.",
   aboutImage: AboutImage,
 };
 
 export const recruiterStats: RecruiterStat[] = [
   { value: "5+ years", label: "Full-stack software delivery" },
   {
-    value: "7 roles",
+    value: "6 roles",
     label: "Full-time, contract, volunteer, and intern work",
   },
   {
-    value: "7 sectors",
-    label: "Automotive, fintech, govtech, healthtech, education, media, retail",
+    value: "5 sectors",
+    label: "Fintech, automotive, healthcare, government, and telecom",
   },
-  { value: "8 projects", label: "Production examples across this portfolio" },
+  { value: "3 countries", label: "Delivery across Myanmar, Singapore, and Thailand" },
 ];
 
 export const recruiterSignals = [
-  "Built Laravel, NestJS, Express.js, Next.js, and React systems in production",
-  "Handled payment flows, OTP auth, PDF reports, Datadog monitoring, and cloud deployment",
-  "Experienced with microservices architecture, legacy modernization, mobile support, and cloud storage",
+  "Owns delivery from business requirement mapping and task estimation through release",
+  "Experienced with secure APIs, local and international payments, code reviews, and risk checks",
+  "Supports seamless releases and production reliability with monitoring, error tracking, and troubleshooting",
 ];
 
 export const capabilityGroups: CapabilityGroup[] = [
   {
-    title: "Backend and secure platform delivery",
+    title: "Core technologies",
     summary:
-      "Designing APIs, authentication flows, payment integrations, report generation, and maintainable service layers for production systems.",
+      "Building full-stack business applications across backend, frontend, databases, mobile, and CMS platforms.",
     items: [
-      "Node.js, NestJS, Express.js, Laravel, PHP",
-      "OTP authentication, Stripe, PayPal, KBZ Pay, email delivery",
-      "PostgreSQL, MySQL, MongoDB, Firebase",
+      "Backend: Node.js, NestJS, Laravel (PHP), REST APIs, GraphQL",
+      "Frontend: JavaScript, TypeScript, React, Next.js, Tailwind CSS, Bootstrap",
+      "Databases: MySQL, PostgreSQL, MongoDB",
+      "Mobile and CMS: React Native, Cordova, WordPress",
     ],
   },
   {
-    title: "Frontend, dashboards, and mobile workflows",
+    title: "DevOps and infrastructure",
     summary:
-      "Building fast interfaces that match business workflows, reduce friction, and stay maintainable after launch.",
+      "Designing distributed systems and supporting dependable cloud delivery and production operations.",
     items: [
-      "Next.js, React, TypeScript, Tailwind CSS",
-      "User/admin dashboards, report history, CMS interfaces",
-      "React Native and Cordova support for mobile data entry and offline access",
+      "Architecture: Microservices and distributed systems",
+      "Tools: Docker, CI/CD, Nginx, Apache, Git",
+      "Cloud: AWS, DigitalOcean, R2 Cloud Storage",
+      "Monitoring: Datadog",
     ],
   },
   {
-    title: "Cloud, operations, and reliability",
+    title: "Development practices and delivery",
     summary:
-      "Shipping features is only half the job. I also care about uptime, observability, and practical deployment workflows.",
+      "Taking products from business requirements to release while protecting technical quality and reliability.",
     items: [
-      "AWS, DigitalOcean, R2 Cloud Storage, Ubuntu, Linux",
-      "Docker, CI/CD, Nginx, Apache, Git",
-      "Datadog monitoring, error tracking, legacy migrations, infrastructure handoff",
+      "End-to-end ownership: Requirements, estimation, and full-cycle delivery",
+      "Technical quality: System design, secure APIs, code reviews, and risk checks",
+      "AI-assisted coding, automated review, test generation, and rapid prototyping",
+      "Seamless releases, error tracking, and production support",
     ],
   },
 ];
@@ -128,6 +131,8 @@ export const toolbelt = [
   "Node.js",
   "NestJS",
   "Laravel",
+  "REST APIs",
+  "GraphQL",
   "Next.js",
   "React",
   "TypeScript",
@@ -140,42 +145,44 @@ export const toolbelt = [
   "Docker",
   "Nginx",
   "Datadog",
+  "CI/CD",
 ];
 
 export const experiences: ExperienceItem[] = [
   {
-    period: "Feb 2025 - Present",
+    period: "Feb 2025 - Aug 2026",
     company: "Siam Mandalar International",
     role: "Full-stack Developer (Contract)",
     location: "Thailand / Remote",
     highlights: [
-      "Built jpauctionsheet.com, a Laravel-based vehicle history platform with VIN checking, user and admin dashboards, OTP authentication, credit packages, Stripe, PayPal, and KBZ Pay payments.",
-      "Implemented PDF report generation, email delivery, blogs, feedback workflows, and transaction tracking for paid vehicle history services.",
-      "Developed autovinhub.com, a Next.js and TypeScript VIN report platform connected to NestJS APIs, enabling users to scan VIN images, check Carfax and AutoCheck availability, purchase report credits with Stripe, generate vehicle history reports, and manage report history.",
+      "Built jpauctionsheet.com with Laravel and Blade end-to-end from initial business plan to release for 1,550+ registered users, integrating third-party vehicle report reseller APIs, credit management, and KBZPay, Stripe, and PayPal payments.",
+      "Delivered autovinhub.com with Next.js, NestJS, and TypeScript from product concept to launch, including OCR-based VIN image scanning, third-party report reseller APIs, Stripe and PayPal payments, and automated report delivery.",
+      "Architected multi-currency credit purchasing, refunds, promotional pricing, audit logs, and secure report delivery across both platforms.",
+      "Used AI-assisted workflows from planning to deployment and implemented AI translation and support-draft tools with human review and prompt-injection safeguards.",
+      "Worked with stakeholders to define requirements, prioritize features, estimate tasks, and deliver releases through testing, deployment, and user feedback.",
     ],
   },
   {
     period: "Feb 2023 - Feb 2025",
     company: "VIABELLS PTE. LTD.",
-    role: "Full-stack Software Developer (Fulltime)",
+    role: "Full-Stack Software Developer (Full-Time)",
     location: "Singapore / Remote",
     highlights: [
-      "Contributed to the SDAX investment platform migration from Java Spring WebFlux to Express.js and Next.js, splitting the platform into separate repositories for investor and issuer modules to improve performance.",
-      "Built and maintained standalone microservices for automated email sending and Web3 features as part of a distributed service architecture.",
-      "Integrated Datadog for real-time monitoring and proactive error tracking to ensure 24/7 system availability.",
-      "Developed a high-performance portfolio for Viabells and a custom WordPress/PHP ecosystem for A.M Skincare.",
+      "Contributed to migrating SDAX investment workflows from Java Spring WebFlux to Express.js and Next.js while maintaining investor and issuer functionality.",
+      "Separated investor and issuer domains into independently maintained repositories and built supporting email and Web3 microservices.",
+      "Implemented Datadog monitoring and proactive error tracking for production visibility and 24/7 operations.",
+      "Built a high-performance Viabells portfolio and a custom WordPress/PHP platform for A.M Skincare.",
     ],
   },
   {
     period: "Jan 2022 - Feb 2023",
     company: "AGGA.IO Co., Ltd",
-    role: "Software Developer (Fulltime)",
+    role: "Software Developer (Full-Time)",
     location: "Yangon, Myanmar",
     highlights: [
-      "Built a high-security Laravel and React Native data collection platform for the Ministry of Union Government, enabling synchronized web and mobile data entry.",
-      "Developed a centralized web and mobile management system to improve accessibility and data accuracy for national disability records.",
-      "Engineered Clinic and Lab Management Systems using Laravel and Vue.js, streamlining patient tracking and diagnostic reporting for medical facilities.",
-      "Optimized the IQnet ISP Billing System by implementing new features and offline mobile support via Cordova to ensure service continuity.",
+      "Built secure national data-collection and disability information systems with Laravel and React Native, enabling synchronized web and mobile operations.",
+      "Delivered clinic and laboratory management platforms with Laravel and Vue.js for patient tracking and diagnostic reporting.",
+      "Extended the IQnet ISP billing platform and added offline Cordova mobile workflows to support field operations with unreliable connectivity.",
     ],
   },
   {
@@ -184,16 +191,16 @@ export const experiences: ExperienceItem[] = [
     role: "Backend Developer (Volunteer)",
     location: "Myanmar / Remote",
     highlights: [
-      "Designed a school management system backend using Laravel and PHP, delivering a scalable platform with a responsive Bootstrap interface.",
+      "Designed a Laravel backend and responsive Bootstrap workflows for a scalable education management system.",
     ],
   },
   {
     period: "Jun 2021 - Oct 2021",
     company: "Marvellous Software Solution",
-    role: "Full-Stack Junior Developer (OJT)",
+    role: "Junior Full-Stack Developer (OJT)",
     location: "Yangon, Myanmar",
     highlights: [
-      "Contributed to scalable web application development while collaborating with cross-functional teams to meet project milestones.",
+      "Built maintainable web features in a cross-functional team, translating requirements into releases and meeting project milestones.",
     ],
   },
   {
@@ -202,7 +209,7 @@ export const experiences: ExperienceItem[] = [
     role: "WordPress Developer (Intern)",
     location: "Yangon, Myanmar",
     highlights: [
-      "Architected and customized content management systems for diverse clients, focusing on intuitive interfaces for non-technical content management.",
+      "Built and customized WordPress content-management systems for multiple clients, giving non-technical teams intuitive control over website content.",
     ],
   },
 ];
@@ -282,7 +289,7 @@ export const projects: ProjectCaseStudy[] = [
     summary:
       "AutoVinHub combines VIN image scanning, report availability checks, credit purchasing, and report history management. The implementation needed to feel fast for users while keeping the NestJS backend structured around payments, data retrieval, and account workflows.",
     role: "Full-stack Developer",
-    engagement: "Feb 2025 - Present",
+    engagement: "Feb 2025 - Aug 2026",
     company: "Siam Mandalar International",
     liveUrl: "https://autovinhub.com/",
     stack: [
@@ -294,9 +301,9 @@ export const projects: ProjectCaseStudy[] = [
       "Tailwind CSS",
     ],
     outcomes: [
-      "Enabled users to scan VIN images, check Carfax and AutoCheck availability, purchase report credits with Stripe, and manage generated reports.",
-      "Connected a fast frontend experience to NestJS APIs suited for payments, report credits, and account workflows.",
-      "Shipped a production-ready platform focused on trust, speed, and clear conversion paths.",
+      "Enabled OCR-based VIN image scanning, third-party report reseller access, Stripe and PayPal payments, and automated report delivery.",
+      "Connected the Next.js frontend to NestJS APIs for credit purchasing, refunds, promotional pricing, and account workflows.",
+      "Took the platform from product concept to public launch.",
     ],
     responsibilities: [
       "Built the end-to-end application architecture across frontend, backend, and deployment.",
@@ -341,7 +348,7 @@ export const projects: ProjectCaseStudy[] = [
     summary:
       "Users needed a trustworthy way to check VIN records, purchase report credits, and receive vehicle history reports. The system was built around a Laravel backend with user and admin dashboards, payment integrations, PDF generation, email delivery, and transaction tracking.",
     role: "Full-stack Developer",
-    engagement: "Feb 2025 - Present",
+    engagement: "Feb 2025 - Aug 2026",
     company: "Siam Mandalar International",
     liveUrl: "https://jpauctionsheet.com/",
     stack: [
@@ -354,9 +361,9 @@ export const projects: ProjectCaseStudy[] = [
       "PDF reports",
     ],
     outcomes: [
-      "Built VIN checking and report-credit workflows for car buyers and dealers.",
+      "Released the platform to more than 1,550 registered users.",
       "Integrated global and local payment options including Stripe, PayPal, and KBZ Pay.",
-      "Delivered admin tooling for transactions, blogs, feedback, PDF reports, and email delivery.",
+      "Integrated third-party vehicle report reseller APIs, multi-currency credit purchasing, refunds, promotional pricing, audit logs, and secure report delivery.",
     ],
     responsibilities: [
       "Translated a niche automotive workflow into a product that non-technical customers could use confidently.",

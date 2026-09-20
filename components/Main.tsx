@@ -57,7 +57,7 @@ const Main = () => {
           <div className="snapshot-list">
             <div className="snapshot-row">
               <span>Work preference</span>
-              <strong>{personalProfile.location}</strong>
+              <strong>Remote and international opportunities</strong>
             </div>
             <div className="snapshot-row">
               <span>Primary stack</span>
@@ -65,7 +65,7 @@ const Main = () => {
             </div>
             <div className="snapshot-row">
               <span>Best fit</span>
-              <strong>Teams that need secure backend, frontend, and cloud delivery</strong>
+              <strong>Teams that need full-cycle product and platform delivery</strong>
             </div>
           </div>
 

@@ -11,19 +11,19 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Zay Lin Htet | Senior Full-Stack Software Developer</title>
+        <title>Zay Lin Htet | Senior Full-Stack Developer</title>
         <meta
           name="description"
-          content="Recruiter-focused portfolio for Zay Lin Htet, a senior full-stack software developer with 5+ years of experience across automotive, fintech, govtech, healthtech, education, and media systems."
+          content="Portfolio for Zay Lin Htet, a senior full-stack developer with 5+ years of experience delivering fintech, automotive, healthcare, government, and telecom applications across Myanmar, Singapore, and Thailand."
         />
         <meta
           name="keywords"
           content="Zay Lin Htet, senior full-stack developer, Node.js developer, NestJS developer, Next.js developer, Laravel developer, software engineer portfolio"
         />
-        <meta property="og:title" content="Zay Lin Htet | Senior Full-Stack Software Developer" />
+        <meta property="og:title" content="Zay Lin Htet | Senior Full-Stack Developer" />
         <meta
           property="og:description"
-          content="Portfolio and case studies covering secure backends, frontend delivery, vehicle history platforms, platform migration, and production software engineering."
+          content="Portfolio and case studies covering full-cycle delivery, secure APIs, payment integrations, platform modernization, and production reliability."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={personalProfile.website} />

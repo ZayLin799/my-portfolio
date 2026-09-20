@@ -3,7 +3,7 @@ import { FormEvent, ChangeEvent, useState } from "react";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { HiOutlineChevronDoubleUp, HiOutlineLocationMarker } from "react-icons/hi";
+import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
@@ -89,9 +89,8 @@ const Contact = () => {
           <p className="body-copy">
             If you are hiring for a full-stack engineer who can contribute across
             product, backend, frontend, and infrastructure, send me a note. I am
-            especially interested in remote product work, contract builds, and
-            roles that need ownership across architecture, delivery, and
-            operations.
+            especially interested in roles that need end-to-end ownership across
+            requirements, architecture, delivery, and production operations.
           </p>
 
           <div className="contact-details">

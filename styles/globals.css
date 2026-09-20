@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@config "../tailwind.config.js";
+@import "tailwindcss";
 
 :root {
   --page-bg: #f6f8fa;

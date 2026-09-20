@@ -43,9 +43,13 @@ const Navbar = () => {
         ? "dark"
         : "light";
 
-    setTheme(initialTheme);
     document.documentElement.dataset.theme = initialTheme;
-    setThemeReady(true);
+    const animationFrame = window.requestAnimationFrame(() => {
+      setTheme(initialTheme);
+      setThemeReady(true);
+    });
+
+    return () => window.cancelAnimationFrame(animationFrame);
   }, []);
 
   const toggleTheme = () => {
