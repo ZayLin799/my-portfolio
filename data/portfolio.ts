@@ -54,26 +54,26 @@ export interface ProjectCaseStudy {
 
 export const personalProfile = {
   name: "Zay Lin Htet",
-  title: "Senior Full-Stack Developer",
+  title: "Senior Full-Stack Software Engineer",
   email: "zaylin13.dev@gmail.com",
   phone: "+95 9795927748",
   location: "Yangon, Myanmar",
   nationality: "Myanmar",
   website: "https://www.zaylinhtet.online/",
-  resumeUrl: "/ZayLinHtet_FullStackDeveloper_Resume.pdf",
+  resumeUrl: "/Zay_Lin_Htet_Senior_Full_Stack_Engineer.pdf",
   linkedinUrl: "https://www.linkedin.com/in/zay-lin-htet",
   githubUrl: "https://github.com/ZayLin799",
-  heroEyebrow: "Senior full-stack developer",
+  heroEyebrow: "Senior full-stack software engineer",
   heroTitle: "I design, modernize, and ship secure web and mobile platforms.",
   heroSummary:
-    "Senior Full-Stack Developer with 5+ years of experience delivering business applications across Myanmar, Singapore, and Thailand, from requirements and planning to system design and end-user release. Hands-on with Laravel/PHP, React, Next.js, Node.js, NestJS, and TypeScript across fintech, automotive, healthcare, government, and telecom.",
+    "Senior Full-Stack Engineer with 5+ years of experience building and supporting business-critical web applications across Myanmar, Singapore, and Thailand. Skilled in Laravel/PHP, React, Next.js, Node.js, NestJS, and TypeScript across fintech, automotive, healthcare, government, and telecommunications.",
   aboutSummary:
-    "Experienced in local and international payment integrations, AI-assisted development with code review and testing, and production reliability through monitoring and troubleshooting.",
+    "I translate business requirements into secure, maintainable solutions, integrate local and international payment systems, collaborate with cross-functional teams, and support reliable production operations.",
   aboutImage: AboutImage,
 };
 
 export const recruiterStats: RecruiterStat[] = [
-  { value: "5+ years", label: "Full-stack software delivery" },
+  { value: "5+ years", label: "Full-stack engineering and software delivery" },
   {
     value: "6 roles",
     label: "Full-time, contract, volunteer, and intern work",
@@ -119,10 +119,10 @@ export const capabilityGroups: CapabilityGroup[] = [
     summary:
       "Taking products from business requirements to release while protecting technical quality and reliability.",
     items: [
-      "End-to-end ownership: Requirements, estimation, and full-cycle delivery",
-      "Technical quality: System design, secure APIs, code reviews, and risk checks",
-      "AI-assisted coding, automated review, test generation, and rapid prototyping",
-      "Seamless releases, error tracking, and production support",
+      "Business analysis and delivery: Requirements gathering, stakeholder communication, task estimation, and full-cycle delivery",
+      "Engineering quality: System design, secure APIs, code reviews, testing, documentation, and risk assessment",
+      "Team collaboration: Cross-functional coordination, clear technical communication, and structured Git workflows",
+      "Release and operations: CI/CD coordination, monitoring, incident troubleshooting, and production support",
     ],
   },
 ];
@@ -152,14 +152,14 @@ export const experiences: ExperienceItem[] = [
   {
     period: "Feb 2025 - Aug 2026",
     company: "Siam Mandalar International",
-    role: "Full-stack Developer (Contract)",
+    role: "Senior Full-Stack Software Engineer (Contract)",
     location: "Thailand / Remote",
     highlights: [
-      "Built jpauctionsheet.com with Laravel and Blade end-to-end from initial business plan to release for 1,550+ registered users, integrating third-party vehicle report reseller APIs, credit management, and KBZPay, Stripe, and PayPal payments.",
-      "Delivered autovinhub.com with Next.js, NestJS, and TypeScript from product concept to launch, including OCR-based VIN image scanning, third-party report reseller APIs, Stripe and PayPal payments, and automated report delivery.",
-      "Architected multi-currency credit purchasing, refunds, promotional pricing, audit logs, and secure report delivery across both platforms.",
-      "Used AI-assisted workflows from planning to deployment and implemented AI translation and support-draft tools with human review and prompt-injection safeguards.",
-      "Worked with stakeholders to define requirements, prioritize features, estimate tasks, and deliver releases through testing, deployment, and user feedback.",
+      "Built jpauctionsheet.com with Laravel and Blade from business planning through production release for 1,550+ registered users, integrating third-party vehicle-report APIs, credit management, and KBZPay, Stripe, and PayPal payments.",
+      "Delivered autovinhub.com with Next.js, NestJS, and TypeScript, including OCR-based VIN scanning, external report APIs, online payments, and automated report delivery.",
+      "Designed multi-currency credit purchases, refund workflows, promotional pricing, audit logs, and secure digital-report delivery across both platforms.",
+      "Applied structured testing, code review, audit controls, deployment checks, and production troubleshooting to support reliable releases.",
+      "Worked directly with business stakeholders to clarify requirements, prioritize features, estimate work, and improve releases using user feedback.",
     ],
   },
   {
@@ -168,10 +168,10 @@ export const experiences: ExperienceItem[] = [
     role: "Full-Stack Software Developer (Full-Time)",
     location: "Singapore / Remote",
     highlights: [
-      "Contributed to migrating SDAX investment workflows from Java Spring WebFlux to Express.js and Next.js while maintaining investor and issuer functionality.",
-      "Separated investor and issuer domains into independently maintained repositories and built supporting email and Web3 microservices.",
-      "Implemented Datadog monitoring and proactive error tracking for production visibility and 24/7 operations.",
-      "Built a high-performance Viabells portfolio and a custom WordPress/PHP platform for A.M Skincare.",
+      "Supported the migration of SDAX investment workflows from Java Spring WebFlux to Express.js and Next.js while preserving critical investor and issuer functionality.",
+      "Separated investor and issuer domains into independently maintained repositories and developed supporting email and Web3 microservices.",
+      "Implemented Datadog monitoring and proactive error tracking to improve production visibility and support continuous operations.",
+      "Delivered a high-performance corporate portfolio for Viabells and a customized WordPress/PHP platform for A.M Skincare.",
     ],
   },
   {
@@ -180,9 +180,9 @@ export const experiences: ExperienceItem[] = [
     role: "Software Developer (Full-Time)",
     location: "Yangon, Myanmar",
     highlights: [
-      "Built secure national data-collection and disability information systems with Laravel and React Native, enabling synchronized web and mobile operations.",
-      "Delivered clinic and laboratory management platforms with Laravel and Vue.js for patient tracking and diagnostic reporting.",
-      "Extended the IQnet ISP billing platform and added offline Cordova mobile workflows to support field operations with unreliable connectivity.",
+      "Built secure national data-collection and disability-information systems with Laravel and React Native, supporting synchronized web and mobile operations for public-sector programs.",
+      "Delivered clinic and laboratory management platforms with Laravel and Vue.js to support patient tracking, laboratory workflows, and diagnostic reporting.",
+      "Extended the IQnet ISP billing platform and introduced offline Cordova mobile workflows, improving continuity for field teams working with unreliable connectivity.",
     ],
   },
   {
@@ -288,7 +288,7 @@ export const projects: ProjectCaseStudy[] = [
       "Developed a Next.js and TypeScript VIN report platform connected to NestJS APIs for paid vehicle history workflows.",
     summary:
       "AutoVinHub combines VIN image scanning, report availability checks, credit purchasing, and report history management. The implementation needed to feel fast for users while keeping the NestJS backend structured around payments, data retrieval, and account workflows.",
-    role: "Full-stack Developer",
+    role: "Senior Full-Stack Software Engineer",
     engagement: "Feb 2025 - Aug 2026",
     company: "Siam Mandalar International",
     liveUrl: "https://autovinhub.com/",
@@ -321,7 +321,7 @@ export const projects: ProjectCaseStudy[] = [
       "Built a Laravel-based restaurant platform that supports flexible menus, guest checkout, and Stripe payments.",
     summary:
       "The project needed more than a brochure site. It had to support real transactions, varying menu structures, and a smoother path to checkout for both new and returning customers.",
-    role: "Full-stack Developer",
+    role: "Senior Full-Stack Software Engineer",
     engagement: "Consulting build",
     company: "Little Myanmar",
     liveUrl: "https://littlemyanmar.org/",
@@ -347,7 +347,7 @@ export const projects: ProjectCaseStudy[] = [
       "Built a Laravel-based vehicle history platform with VIN checking, dashboards, OTP authentication, report generation, and multiple payment methods.",
     summary:
       "Users needed a trustworthy way to check VIN records, purchase report credits, and receive vehicle history reports. The system was built around a Laravel backend with user and admin dashboards, payment integrations, PDF generation, email delivery, and transaction tracking.",
-    role: "Full-stack Developer",
+    role: "Senior Full-Stack Software Engineer",
     engagement: "Feb 2025 - Aug 2026",
     company: "Siam Mandalar International",
     liveUrl: "https://jpauctionsheet.com/",
@@ -459,7 +459,7 @@ export const projects: ProjectCaseStudy[] = [
       "Engineered a fully customized, real-time POS and inventory management ecosystem to streamline daily retail operations.",
     summary:
       "Pinkpop POS is a tailor-made retail management system. Built using Laravel 12, Inertia.js, and React 19 with Tailwind CSS, the platform connects cashiers, store managers, and administrators through a unified, high-performance interface. It provides comprehensive control over master data (products, categories, units, payments), sales registration (new sales, logs, calendar views), procurement, expense tracking, customer/supplier credit systems, and multi-dimensional financial and stock reports.",
-    role: "Full-stack Developer",
+    role: "Full-Stack Software Engineer",
     engagement: "Freelance Build",
     company: "Pinkpop POS",
     liveUrl: "",
