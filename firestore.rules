@@ -1,0 +1,34 @@
+rules_version = '2';
+
+// Security rules for the portfolio's Firestore database.
+// The site only ever writes contact-form messages. Nothing is readable
+// from the browser; read messages in the Firebase console or with the
+// Admin SDK, which bypass these rules.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Keep the field list and size limits in sync with components/Contact.tsx.
+    function isValidMessage(data) {
+      return data.keys().hasOnly(['name', 'phone', 'email', 'subject', 'message', 'status', 'createdAt'])
+        && data.keys().hasAll(['name', 'phone', 'email', 'subject', 'message', 'status', 'createdAt'])
+        && data.name is string && data.name.size() > 0 && data.name.size() <= 100
+        && data.phone is string && data.phone.size() <= 30
+        && data.email is string && data.email.size() <= 254
+        && data.email.matches('^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$')
+        && data.subject is string && data.subject.size() <= 150
+        && data.message is string && data.message.size() > 0 && data.message.size() <= 5000
+        && data.status == 'new'
+        && data.createdAt == request.time;
+    }
+
+    match /messages/{messageId} {
+      allow create: if isValidMessage(request.resource.data);
+      allow read, update, delete: if false;
+    }
+
+    // Deny everything else by default.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

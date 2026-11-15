@@ -872,6 +872,15 @@ textarea:focus-visible {
   width: 100%;
 }
 
+/* Hidden from people and screen readers, still visible to naive bots. */
+.form-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .contact-details {
   margin-top: 0.35rem;
 }

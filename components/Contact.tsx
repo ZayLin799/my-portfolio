@@ -31,8 +31,23 @@ const initialForm: ContactFormState = {
   message: "",
 };
 
+// Keep these in sync with the size checks in firestore.rules.
+const FIELD_LIMITS = {
+  name: 100,
+  phone: 30,
+  email: 254,
+  subject: 150,
+  message: 5000,
+} as const;
+
+const successToast: ToastState = {
+  type: "success",
+  msg: "Message sent. I will get back to you soon.",
+};
+
 const Contact = () => {
   const [form, setForm] = useState<ContactFormState>(initialForm);
+  const [honeypot, setHoneypot] = useState("");
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState<ToastState | null>(null);
 
@@ -50,25 +65,33 @@ const Contact = () => {
     setLoading(true);
     setToast(null);
 
+    // Bots tend to fill every field, including the hidden honeypot.
+    // Pretend it worked so they don't retry, but store nothing.
+    if (honeypot) {
+      setToast(successToast);
+      setForm(initialForm);
+      setLoading(false);
+      return;
+    }
+
     try {
       await addDoc(collection(db, "messages"), {
-        ...form,
+        name: form.name.trim(),
+        phone: form.phone.trim(),
+        email: form.email.trim(),
+        subject: form.subject.trim(),
+        message: form.message.trim(),
         status: "new",
         createdAt: serverTimestamp(),
       });
 
-      setToast({
-        type: "success",
-        msg: "Message sent. I will get back to you soon.",
-      });
+      setToast(successToast);
       setForm(initialForm);
     } catch (error) {
-      const message =
-        error instanceof Error ? error.message : "Failed to send your message.";
-
+      console.error("Contact form submission failed", error);
       setToast({
         type: "error",
-        msg: message,
+        msg: "Sorry, your message could not be sent. Please try again or email me directly.",
       });
     } finally {
       setLoading(false);
@@ -131,6 +154,8 @@ const Contact = () => {
                   name="name"
                   value={form.name}
                   onChange={onChange}
+                  maxLength={FIELD_LIMITS.name}
+                  autoComplete="name"
                   placeholder="Your name"
                   required
                 />
@@ -139,10 +164,12 @@ const Contact = () => {
               <label>
                 <span>Phone</span>
                 <input
-                  type="text"
+                  type="tel"
                   name="phone"
                   value={form.phone}
                   onChange={onChange}
+                  maxLength={FIELD_LIMITS.phone}
+                  autoComplete="tel"
                   placeholder="Optional"
                 />
               </label>
@@ -155,6 +182,8 @@ const Contact = () => {
                 name="email"
                 value={form.email}
                 onChange={onChange}
+                maxLength={FIELD_LIMITS.email}
+                autoComplete="email"
                 placeholder="name@company.com"
                 required
               />
@@ -167,6 +196,7 @@ const Contact = () => {
                 name="subject"
                 value={form.subject}
                 onChange={onChange}
+                maxLength={FIELD_LIMITS.subject}
                 placeholder="Hiring, freelance, or project inquiry"
               />
             </label>
@@ -178,8 +208,21 @@ const Contact = () => {
                 name="message"
                 value={form.message}
                 onChange={onChange}
+                maxLength={FIELD_LIMITS.message}
                 placeholder="Tell me about the role, project, or team."
                 required
+              />
+            </label>
+
+            <label className="form-honeypot" aria-hidden="true">
+              <span>Leave this field empty</span>
+              <input
+                type="text"
+                name="website"
+                value={honeypot}
+                onChange={(event) => setHoneypot(event.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
               />
             </label>
 
@@ -189,6 +232,7 @@ const Contact = () => {
 
             {toast && (
               <div
+                role={toast.type === "error" ? "alert" : "status"}
                 className={`toast-message ${
                   toast.type === "success" ? "toast-success" : "toast-error"
                 }`}
