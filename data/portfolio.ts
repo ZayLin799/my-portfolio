@@ -66,17 +66,17 @@ export const personalProfile = {
   heroEyebrow: "Senior full-stack software engineer",
   heroTitle: "I design, modernize, and ship secure web and mobile platforms.",
   heroSummary:
-    "Senior Full-Stack Engineer with 5+ years of experience building and supporting business-critical web applications across Myanmar, Singapore, and Thailand. Skilled in Laravel/PHP, React, Next.js, Node.js, NestJS, and TypeScript across fintech, automotive, healthcare, government, and telecommunications.",
+    "Senior Full-Stack Engineer with 5+ years of experience building and supporting business-critical web applications across Myanmar, Singapore, and Thailand. Skilled in Laravel/PHP, Go, React, Next.js, Node.js, NestJS, and TypeScript across fintech, automotive, healthcare, government, and telecommunications. Works in Agile/Scrum teams with a product mindset.",
   aboutSummary:
-    "I translate business requirements into secure, maintainable solutions, integrate local and international payment systems, collaborate with cross-functional teams, and support reliable production operations.",
+    "I turn business requirements into prioritized user stories and secure, maintainable solutions, integrate local and international payment systems, collaborate with cross-functional Scrum teams, and support reliable production operations.",
   aboutImage: AboutImage,
 };
 
 export const recruiterStats: RecruiterStat[] = [
   { value: "5+ years", label: "Full-stack engineering and software delivery" },
   {
-    value: "6 roles",
-    label: "Full-time, contract, volunteer, and intern work",
+    value: "7 roles",
+    label: "Full-time, contract, volunteer, OJT, and intern work",
   },
   {
     value: "5 sectors",
@@ -86,7 +86,8 @@ export const recruiterStats: RecruiterStat[] = [
 ];
 
 export const recruiterSignals = [
-  "Owns delivery from business requirement mapping and task estimation through release",
+  "Works in Scrum teams from backlog refinement and sprint planning through review and release",
+  "Turns business requirements into user stories with clear acceptance criteria and priorities",
   "Experienced with secure APIs, local and international payments, code reviews, and risk checks",
   "Supports seamless releases and production reliability with monitoring, error tracking, and troubleshooting",
 ];
@@ -97,7 +98,7 @@ export const capabilityGroups: CapabilityGroup[] = [
     summary:
       "Building full-stack business applications across backend, frontend, databases, mobile, and CMS platforms.",
     items: [
-      "Backend: Node.js, NestJS, Laravel (PHP), REST APIs, GraphQL",
+      "Backend: Node.js, NestJS, Go (Golang), Laravel (PHP), REST APIs, GraphQL",
       "Frontend: JavaScript, TypeScript, React, Next.js, Tailwind CSS, Bootstrap",
       "Databases: MySQL, PostgreSQL, MongoDB",
       "Mobile and CMS: React Native, Cordova, WordPress",
@@ -117,12 +118,12 @@ export const capabilityGroups: CapabilityGroup[] = [
   {
     title: "Development practices and delivery",
     summary:
-      "Taking products from business requirements to release while protecting technical quality and reliability.",
+      "Working in Agile/Scrum teams to take products from business requirements to release while protecting quality and reliability.",
     items: [
-      "Business analysis and delivery: Requirements gathering, stakeholder communication, task estimation, and full-cycle delivery",
-      "Engineering quality: System design, secure APIs, code reviews, testing, documentation, and risk assessment",
-      "Team collaboration: Cross-functional coordination, clear technical communication, and structured Git workflows",
-      "Release and operations: CI/CD coordination, monitoring, incident troubleshooting, and production support",
+      "Agile and Scrum: Sprint planning, backlog refinement, estimation, stand-ups, and retrospectives",
+      "Product and analysis: Requirements, user stories, acceptance criteria, prioritization, and stakeholder communication",
+      "Engineering quality: System design, secure APIs, code reviews, testing, and documentation",
+      "Release and operations: CI/CD, monitoring, troubleshooting, and production support",
     ],
   },
 ];
@@ -130,6 +131,7 @@ export const capabilityGroups: CapabilityGroup[] = [
 export const toolbelt = [
   "Node.js",
   "NestJS",
+  "Go",
   "Laravel",
   "REST APIs",
   "GraphQL",
@@ -150,6 +152,18 @@ export const toolbelt = [
 
 export const experiences: ExperienceItem[] = [
   {
+    period: "Oct 2026 - Present",
+    company: "Fluxion Technology",
+    role: "AI Augmented Software Engineer (Full-Time)",
+    location: "Yangon, Myanmar",
+    highlights: [
+      "Deliver full-stack features for enterprise client products, using AI-assisted development for implementation, code review, testing, and documentation.",
+      "Contribute to backlog refinement, sprint planning, estimation, stand-ups, reviews, and retrospectives.",
+      "Work with product owners, designers, and QA to turn requirements into user stories with clear acceptance criteria.",
+      "Apply secure-by-design practices through code reviews, CI/CD checks, and structured Git workflows.",
+    ],
+  },
+  {
     period: "Feb 2025 - Aug 2026",
     company: "Siam Mandalar International",
     role: "Senior Full-Stack Software Engineer (Contract)",
@@ -159,7 +173,7 @@ export const experiences: ExperienceItem[] = [
       "Delivered autovinhub.com with Next.js, NestJS, and TypeScript, including OCR-based VIN scanning, external report APIs, online payments, and automated report delivery.",
       "Designed multi-currency credit purchases, refund workflows, promotional pricing, audit logs, and secure digital-report delivery across both platforms.",
       "Applied structured testing, code review, audit controls, deployment checks, and production troubleshooting to support reliable releases.",
-      "Worked directly with business stakeholders to clarify requirements, prioritize features, estimate work, and improve releases using user feedback.",
+      "Worked directly with business stakeholders to clarify requirements, shape and prioritize the feature backlog, estimate work, and plan iterative releases informed by user feedback.",
     ],
   },
   {
@@ -172,6 +186,7 @@ export const experiences: ExperienceItem[] = [
       "Separated investor and issuer domains into independently maintained repositories and developed supporting email and Web3 microservices.",
       "Implemented Datadog monitoring and proactive error tracking to improve production visibility and support continuous operations.",
       "Delivered a high-performance corporate portfolio for Viabells and a customized WordPress/PHP platform for A.M Skincare.",
+      "Worked in Scrum sprints with a cross-functional team, taking part in sprint planning, estimation, daily stand-ups, sprint reviews, and retrospectives.",
     ],
   },
   {

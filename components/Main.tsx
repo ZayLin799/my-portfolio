@@ -61,7 +61,7 @@ const Main = () => {
             </div>
             <div className="snapshot-row">
               <span>Primary stack</span>
-              <strong>Node.js, NestJS, Laravel, Next.js</strong>
+              <strong>Node.js, NestJS, Go, Laravel, Next.js</strong>
             </div>
             <div className="snapshot-row">
               <span>Best fit</span>

@@ -18,7 +18,7 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="Zay Lin Htet, senior full-stack software engineer, Node.js engineer, NestJS engineer, Next.js engineer, Laravel engineer, software engineer portfolio"
+          content="Zay Lin Htet, senior full-stack software engineer, Node.js engineer, NestJS engineer, Go engineer, Next.js engineer, Laravel engineer, Agile Scrum software engineer, software engineer portfolio"
         />
         <meta property="og:title" content="Zay Lin Htet | Senior Full-Stack Software Engineer" />
         <meta
