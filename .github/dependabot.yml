@@ -5,6 +5,15 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    ignore:
+      # typescript-eslint (used by eslint-config-next) does not support TS 7 yet.
+      # Remove once https://github.com/typescript-eslint/typescript-eslint/issues/10940 ships.
+      - dependency-name: typescript
+        versions: [">=7"]
+      # eslint-config-next's bundled plugins (react, jsx-a11y, import) only
+      # declare support up to ESLint 9. Remove once they support ESLint 10.
+      - dependency-name: eslint
+        versions: [">=10"]
     groups:
       minor-and-patch:
         update-types: [minor, patch]
