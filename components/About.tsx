@@ -2,7 +2,11 @@ import Image from "next/image";
 
 import { personalProfile } from "../data/portfolio";
 
-const About = () => {
+interface AboutProps {
+  yearsOfExperience: number;
+}
+
+const About = ({ yearsOfExperience }: AboutProps) => {
   return (
     <section id="about" className="section-shell">
       <div className="section-heading">
@@ -16,7 +20,7 @@ const About = () => {
             {personalProfile.aboutSummary}
           </p>
           <p className="body-copy">
-            Over the last 5+ years, I have delivered business
+            Over the last {yearsOfExperience}+ years, I have delivered business
             applications across Myanmar, Singapore, and Thailand for fintech,
             automotive, healthcare, government, and telecom teams.
           </p>

@@ -65,17 +65,17 @@ export const personalProfile = {
   githubUrl: "https://github.com/ZayLin799",
   heroEyebrow: "Senior full-stack software engineer",
   heroTitle: "I design, modernize, and ship secure web and mobile platforms.",
-  heroSummary:
-    "Senior Full-Stack Engineer with 5+ years of experience building and supporting business-critical web applications across Myanmar, Singapore, and Thailand. Skilled in Laravel/PHP, Go, React, Next.js, Node.js, NestJS, and TypeScript across fintech, automotive, healthcare, government, and telecommunications. Works in Agile/Scrum teams with a product mindset.",
+  heroSummary: (years: number) =>
+    `Senior Full-Stack Engineer with ${years}+ years of experience building and supporting business-critical web applications across Myanmar, Singapore, and Thailand. Skilled in Laravel/PHP, Go, React, Next.js, Node.js, NestJS, and TypeScript across fintech, automotive, healthcare, government, and telecommunications. Works in Agile/Scrum teams with a product mindset.`,
   aboutSummary:
     "I turn business requirements into prioritized user stories and secure, maintainable solutions, integrate local and international payment systems, collaborate with cross-functional Scrum teams, and support reliable production operations.",
   aboutImage: AboutImage,
 };
 
-export const recruiterStats: RecruiterStat[] = [
-  { value: "5+ years", label: "Full-stack engineering and software delivery" },
+export const getRecruiterStats = (years: number): RecruiterStat[] => [
+  { value: `${years}+ years`, label: "Full-stack engineering and software delivery" },
   {
-    value: "7 roles",
+    value: `${experiences.length} roles`,
     label: "Full-time, contract, volunteer, OJT, and intern work",
   },
   {
@@ -507,3 +507,30 @@ export const getProjectBySlug = (slug: string) =>
 // tags, and the sitemap.
 export const absoluteUrl = (path = "/") =>
   new URL(path, personalProfile.website).toString();
+
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+// Parses the start of a period such as "Jun 2021 - Oct 2021" into a Date.
+const parsePeriodStart = (period: string) => {
+  const [month, year] = period.split(" - ")[0].trim().split(" ");
+  const monthIndex = MONTHS.indexOf(month);
+  if (monthIndex < 0 || !/^\d{4}$/.test(year)) {
+    throw new Error(`Unrecognised experience period: "${period}"`);
+  }
+  return new Date(Date.UTC(Number(year), monthIndex, 1));
+};
+
+// Professional experience starts at the earliest role that is not an
+// internship, so the count matches the "N+ years" figure on the CV.
+export const careerStart = experiences
+  .filter((item) => !/\(intern\)/i.test(item.role))
+  .map((item) => parsePeriodStart(item.period))
+  .reduce((earliest, date) => (date < earliest ? date : earliest));
+
+// Whole years since careerStart, e.g. 5 for 5 years and 5 months.
+export const getYearsOfExperience = (asOf: Date = new Date()) => {
+  const months =
+    (asOf.getUTCFullYear() - careerStart.getUTCFullYear()) * 12 +
+    (asOf.getUTCMonth() - careerStart.getUTCMonth());
+  return Math.floor(months / 12);
+};

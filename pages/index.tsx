@@ -1,3 +1,4 @@
+import type { GetStaticProps } from "next";
 import Head from "next/head";
 import About from "../components/About";
 import Contact from "../components/Contact";
@@ -5,16 +6,20 @@ import Experience from "../components/Experience";
 import Main from "../components/Main";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
-import { absoluteUrl, personalProfile } from "../data/portfolio";
+import { absoluteUrl, getYearsOfExperience, personalProfile } from "../data/portfolio";
 
-export default function Home() {
+interface HomeProps {
+  yearsOfExperience: number;
+}
+
+export default function Home({ yearsOfExperience }: HomeProps) {
   return (
     <>
       <Head>
         <title>Zay Lin Htet | Senior Full-Stack Software Engineer</title>
         <meta
           name="description"
-          content="Portfolio for Zay Lin Htet, a senior full-stack software engineer with 5+ years of experience delivering business-critical fintech, automotive, healthcare, government, and telecommunications applications across Myanmar, Singapore, and Thailand."
+          content={`Portfolio for Zay Lin Htet, a senior full-stack software engineer with ${yearsOfExperience}+ years of experience delivering business-critical fintech, automotive, healthcare, government, and telecommunications applications across Myanmar, Singapore, and Thailand.`}
         />
         <meta
           name="keywords"
@@ -33,8 +38,8 @@ export default function Home() {
       </Head>
 
       <main className="page-shell">
-        <Main />
-        <About />
+        <Main yearsOfExperience={yearsOfExperience} />
+        <About yearsOfExperience={yearsOfExperience} />
         <Skills />
         <Experience />
         <Projects />
@@ -43,3 +48,11 @@ export default function Home() {
     </>
   );
 }
+
+// Computed on the server rather than in the browser so the server HTML and
+// the hydrated page always agree. Revalidating daily rolls the figure over
+// on the anniversary without needing a redeploy.
+export const getStaticProps: GetStaticProps<HomeProps> = async () => ({
+  props: { yearsOfExperience: getYearsOfExperience() },
+  revalidate: 60 * 60 * 24,
+});

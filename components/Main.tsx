@@ -4,18 +4,22 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { RiPlayFill } from "react-icons/ri";
 
 import {
+  getRecruiterStats,
   personalProfile,
   recruiterSignals,
-  recruiterStats,
 } from "../data/portfolio";
 
-const Main = () => {
+interface MainProps {
+  yearsOfExperience: number;
+}
+
+const Main = ({ yearsOfExperience }: MainProps) => {
   return (
     <section id="home" className="hero-section">
       <div className="hero-copy">
         <p className="eyebrow">{personalProfile.heroEyebrow}</p>
         <h1>{personalProfile.heroTitle}</h1>
-        <p className="hero-summary">{personalProfile.heroSummary}</p>
+        <p className="hero-summary">{personalProfile.heroSummary(yearsOfExperience)}</p>
 
         <div className="hero-actions">
           <Link href="/#projects" className="button-primary">
@@ -82,7 +86,7 @@ const Main = () => {
         </div>
 
         <div className="hero-stat-grid">
-          {recruiterStats.map((stat) => (
+          {getRecruiterStats(yearsOfExperience).map((stat) => (
             <div key={stat.label} className="surface-panel stat-card">
               <strong>{stat.value}</strong>
               <span>{stat.label}</span>
