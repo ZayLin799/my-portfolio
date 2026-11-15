@@ -1,14 +1,14 @@
 import type { StaticImageData } from "next/image";
 
-import AboutImage from "../public/assets/about.jpg";
-import AmSkinImage from "../public/assets/projects/am-skin.png";
-import AutoVinHubImage from "../public/assets/projects/AutoVinHub.png";
-import JPAuctionSheetImage from "../public/assets/projects/jpauctionsheet.png";
-import LittleMyanmarImage from "../public/assets/projects/little-myanmar.jpg";
-import PinkpopPosImage from "../public/assets/projects/pinkpop-pos.png";
-import SdaxImage from "../public/assets/projects/sdax.png";
-import ViabellsImage from "../public/assets/projects/viabells.png";
-import YunHomeImage from "../public/assets/projects/YunHome.png";
+import AboutImage from "../public/assets/about.webp";
+import AmSkinImage from "../public/assets/projects/am-skin.webp";
+import AutoVinHubImage from "../public/assets/projects/AutoVinHub.webp";
+import JPAuctionSheetImage from "../public/assets/projects/jpauctionsheet.webp";
+import LittleMyanmarImage from "../public/assets/projects/little-myanmar.webp";
+import PinkpopPosImage from "../public/assets/projects/pinkpop-pos.webp";
+import SdaxImage from "../public/assets/projects/sdax.webp";
+import ViabellsImage from "../public/assets/projects/viabells.webp";
+import YunHomeImage from "../public/assets/projects/YunHome.webp";
 
 export interface RecruiterStat {
   label: string;
