@@ -55,7 +55,7 @@ const CaseStudyPage = ({ project }: CaseStudyPageProps) => {
             <Image
               src={project.image}
               alt={project.title}
-              priority
+              preload
               className="case-study-image"
             />
           </div>

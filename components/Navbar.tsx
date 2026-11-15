@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FaMoon, FaSun } from "react-icons/fa";
 
@@ -18,6 +18,9 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [themeReady, setThemeReady] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const wasMenuOpen = useRef(false);
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 24);
@@ -32,6 +35,24 @@ const Navbar = () => {
     return () => {
       document.body.style.overflow = "auto";
     };
+  }, [menuOpen]);
+
+  // Move focus into the drawer when it opens, back to the menu button when
+  // it closes, and let Escape close it.
+  useEffect(() => {
+    if (menuOpen) {
+      closeButtonRef.current?.focus();
+    } else if (wasMenuOpen.current) {
+      menuButtonRef.current?.focus();
+    }
+    wasMenuOpen.current = menuOpen;
+
+    if (!menuOpen) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
   }, [menuOpen]);
 
   useEffect(() => {
@@ -115,10 +136,13 @@ const Navbar = () => {
           </button>
 
           <button
+            ref={menuButtonRef}
             type="button"
             className="menu-toggle"
             onClick={() => setMenuOpen(true)}
             aria-label="Open navigation"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
           >
             <AiOutlineMenu size={18} />
           </button>
@@ -128,13 +152,22 @@ const Navbar = () => {
       <div
         className={`mobile-overlay ${menuOpen ? "mobile-overlay-visible" : ""}`}
         onClick={() => setMenuOpen(false)}
+        aria-hidden="true"
       />
 
-      <aside className={`mobile-drawer ${menuOpen ? "mobile-drawer-open" : ""}`}>
+      <aside
+        id="mobile-navigation"
+        className={`mobile-drawer ${menuOpen ? "mobile-drawer-open" : ""}`}
+        aria-label="Mobile navigation"
+        // While closed the drawer sits off-screen; inert keeps its links out
+        // of the tab order and away from screen readers.
+        inert={!menuOpen}
+      >
         <div className="mobile-drawer-inner">
           <div className="mobile-drawer-header">
             <p className="eyebrow">Navigation</p>
             <button
+              ref={closeButtonRef}
               type="button"
               className="menu-toggle"
               onClick={() => setMenuOpen(false)}

@@ -5,7 +5,7 @@ import Experience from "../components/Experience";
 import Main from "../components/Main";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
-import { personalProfile } from "../data/portfolio";
+import { absoluteUrl, personalProfile } from "../data/portfolio";
 
 export default function Home() {
   return (
@@ -28,6 +28,8 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={personalProfile.website} />
         <link rel="canonical" href={personalProfile.website} />
+        <meta property="og:image" content={absoluteUrl(personalProfile.aboutImage.src)} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <main className="page-shell">

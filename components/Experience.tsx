@@ -1,9 +1,30 @@
-import { useState } from "react";
+import { KeyboardEvent, useRef, useState } from "react";
 import { certifications, education, experiences } from "../data/portfolio";
 
 const Experience = () => {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const activeExperience = experiences[activeTabIndex];
+
+  // Arrow keys, Home and End move between tabs, per the WAI-ARIA tabs pattern.
+  const onTabKeyDown = (event: KeyboardEvent<HTMLButtonElement>) => {
+    const last = experiences.length - 1;
+    const next =
+      event.key === "ArrowDown" || event.key === "ArrowRight"
+        ? activeTabIndex === last ? 0 : activeTabIndex + 1
+        : event.key === "ArrowUp" || event.key === "ArrowLeft"
+          ? activeTabIndex === 0 ? last : activeTabIndex - 1
+          : event.key === "Home"
+            ? 0
+            : event.key === "End"
+              ? last
+              : null;
+
+    if (next === null) return;
+    event.preventDefault();
+    setActiveTabIndex(next);
+    tabRefs.current[next]?.focus();
+  };
 
   return (
     <section id="experience" className="section-shell">
@@ -14,19 +35,35 @@ const Experience = () => {
 
       <div className="experience-layout">
         <div className="tabs-container surface-panel">
-          <div className="tabs-sidebar">
+          <div className="tabs-sidebar" role="tablist" aria-label="Employers">
             {experiences.map((item, index) => (
               <button
                 key={`${item.company}-${item.period}`}
+                ref={(element) => {
+                  tabRefs.current[index] = element;
+                }}
+                type="button"
+                role="tab"
+                id={`experience-tab-${index}`}
+                aria-selected={activeTabIndex === index}
+                aria-controls="experience-panel"
+                tabIndex={activeTabIndex === index ? 0 : -1}
                 className={`tab-btn ${activeTabIndex === index ? "active" : ""}`}
                 onClick={() => setActiveTabIndex(index)}
+                onKeyDown={onTabKeyDown}
               >
                 {item.company}
               </button>
             ))}
           </div>
           
-          <div className="tab-content">
+          <div
+            className="tab-content"
+            role="tabpanel"
+            id="experience-panel"
+            aria-labelledby={`experience-tab-${activeTabIndex}`}
+            tabIndex={0}
+          >
             <article className="timeline-card">
               <div className="timeline-header">
                 <div>

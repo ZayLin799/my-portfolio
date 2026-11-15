@@ -328,7 +328,7 @@ export const projects: ProjectCaseStudy[] = [
     image: AutoVinHubImage,
   },
   {
-    slug: "littleMyanmar",
+    slug: "little-myanmar",
     title: "Little Myanmar",
     category: "Client project",
     heroLabel: "Restaurant ordering platform",
@@ -354,7 +354,7 @@ export const projects: ProjectCaseStudy[] = [
     image: LittleMyanmarImage,
   },
   {
-    slug: "JPAuctionSheet",
+    slug: "jp-auction-sheet",
     title: "JP Auction Sheet",
     category: "Client project",
     heroLabel: "Vehicle history checking and payment workflow",
@@ -440,7 +440,7 @@ export const projects: ProjectCaseStudy[] = [
     image: ViabellsImage,
   },
   {
-    slug: "amSkin",
+    slug: "am-skin",
     title: "A.M Skincare",
     category: "Full-time work",
     heroLabel: "Custom WordPress commerce experience",
@@ -502,3 +502,8 @@ export const projects: ProjectCaseStudy[] = [
 
 export const getProjectBySlug = (slug: string) =>
   projects.find((project) => project.slug === slug);
+
+// Builds an absolute URL on the live site, for canonical links, Open Graph
+// tags, and the sitemap.
+export const absoluteUrl = (path = "/") =>
+  new URL(path, personalProfile.website).toString();

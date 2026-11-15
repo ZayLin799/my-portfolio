@@ -37,7 +37,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
         </div>
 
         <div className="project-actions">
-          <Link href={`/${project.slug}`} className="text-link">
+          <Link href={`/projects/${project.slug}`} className="text-link">
             Read case study
           </Link>
           {project.liveUrl && (
